@@ -2,8 +2,6 @@
 import random
 number = random.randint(-10000, 10000)
 divisor = 10
-if (number < 0):
-	number *= -1
 remainder = number % divisor
 print("Last digit of {} is {}".format(number, remainder), end = ' ')
 if (remainder > 5):
