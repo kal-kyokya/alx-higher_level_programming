@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 def pow(a, b):
     negative = 0
     if (b == 1):
