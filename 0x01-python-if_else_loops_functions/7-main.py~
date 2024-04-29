@@ -1,0 +1,7 @@
+#!/usr/bin/python3
+lcase = __import__('7-islower').islower
+
+print(f"a is {("lower" if lcase("a") else "upper")}")
+print(f"A is {("lower" if lcase("A") else "upper")}")
+print(f"z is {("lower" if lcase("z") else "upper")}")
+print(f"Z is {("lower" if lcase("Z") else "upper")}")
