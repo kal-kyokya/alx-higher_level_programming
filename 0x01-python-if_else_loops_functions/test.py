@@ -1,3 +1,4 @@
-#!/usr/bin/python3
-for int in range(0, 26):
-    print(f"{ord('a') + int:c}", end="")
+#!/usr/bin/env python3
+import dis
+add = __import__('10-main').add
+print(dis.dis(add))
