@@ -1,3 +1,4 @@
 #!/usr/bin/python3
-for int in range(0, 26):
-    print(f"{ord('a') + int:c}", end="")
+for char in range(ord('a'), ord('z') + 1):
+    print("{:c}".format(char), end="")
+
