@@ -1,0 +1,1 @@
+The following directory is home to all files and subdirectories required for completion of the 0x03 Python project by ALX-Africa on Data structures when they pertain to the Python Programming language.
