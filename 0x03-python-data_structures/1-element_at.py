@@ -7,11 +7,11 @@ def element_at(my_list, idx):
         idx: The index at which retrieval occurs.
 
     Return:
-        The nth element or none if failure.
+        The nth element or None if failure.
     '''
     if idx < 0:
-        return none
+        return None
     for count in my_list:
         if count == idx:
             return my_list[count]
-    return none
+    return None
