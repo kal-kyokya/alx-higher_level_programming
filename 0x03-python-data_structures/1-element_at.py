@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 def element_at(my_list, idx):
-    ''' Retrieves nth elements of a list.
+    '''Retrieves nth elements of a list.
 
     Args:
         my_list: The actual list.
@@ -11,7 +11,9 @@ def element_at(my_list, idx):
     '''
     if idx < 0:
         return None
-    for count in my_list:
+    count = 0
+    for num in my_list:
         if count == idx:
             return my_list[count]
+        count += 1
     return None
