@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+def print_matrix_integer(matrix=[[]]):
+    '''Prints an integer matrix to stdout.
+
+    Args:
+        matrix: A two-dimensional list, i.e a matrix.
+
+    Return:
+        Nothing
+    '''
