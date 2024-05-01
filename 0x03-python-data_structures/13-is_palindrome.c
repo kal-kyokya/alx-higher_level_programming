@@ -25,7 +25,7 @@ int is_palindrome(listint_t **head)
 	while (current != NULL)
 	{
 		reversed->n = current->n;
-		if (reversed->n == (*head)->n)
+		if (current->next == NULL)
 			break;
 		reversed = malloc(sizeof(listint_t));
 		if (reversed == NULL)
@@ -46,5 +46,6 @@ int is_palindrome(listint_t **head)
 		}
 		return (0);
 	}
+
 	return (1);
 }
