@@ -1,51 +1,71 @@
 #include "lists.h"
 
 /**
- * is_palindrome - Tells if a singly linked list is a palindrome or not.
- * @head: Address of the head pointer.
- *
- * Return: 1 if SLL is a palindrome, 0 otherwise.
+ * reverse_list - reverses a linked list
+ * @head: first node
+ * Return: reversed list.
+ */
+listint_t *reverse_list(listint_t *head)
+{
+	listint_t *prev = NULL;
+	listint_t *current = head;
+	listint_t *next = NULL;
+
+	while (current != NULL)
+	{
+		next = current->next;
+		current->next = prev;
+		prev = current;
+		current = next;
+	}
+	return (prev);
+}
+
+/**
+ * compare_list - compares two lists
+ * @list1: first list
+ * @list2: second list
+ * Return: NULL if list are similar 0 if different.
+ */
+int compare_list(listint_t *list1, listint_t *list2)
+{
+	while (list1 != NULL && list2 != NULL)
+	{
+		if (list1->n != list2->n)
+			return (0);
+
+	list1 = list1->next;
+	list2 = list2->next;
+	}
+	return (1);
+}
+
+/**
+ * is_palindrome - checks if a singly linked list is a palindrome
+ * @head: first node
+ * Return: 0 if it is not a palindrome, 1 if it is a palindrome.
  */
 int is_palindrome(listint_t **head)
 {
-	int len, count;
-	listint_t *current, *head2, *reversed;
+	int result;
+	listint_t *slow, *fast, *reversed_second_half;
 
-	if (head == NULL)
-		return (0);
-	if (*head ==  NULL || (*head)->next == NULL)
+	if (*head == NULL || (*head)->next == NULL)
 		return (1);
-	current = *head;
-	reversed = malloc(sizeof(listint_t));
-	if (reversed == NULL)
-		return (0);
-	reversed->next = NULL;
-	head2 = reversed;
-	len = count = 0;
-	while (current != NULL)
+
+	slow = *head;
+	fast = *head;
+
+	while (fast != NULL && fast->next != NULL)
 	{
-		reversed->n = current->n;
-		if (current->next == NULL)
-			break;
-		reversed = malloc(sizeof(listint_t));
-		if (reversed == NULL)
-			return (0);
-		reversed->next = head2;
-		head2 = reversed;
-		current = current->next;
-		len++;
-	}
-	while (count < len / 2)
-	{
-		if (head2->n == (*head)->n)
-		{
-			count++;
-			head2 = head2->next;
-			*head = (*head)->next;
-			continue;
-		}
-		return (0);
+		slow = slow->next;
+		fast = fast->next->next;
 	}
 
-	return (1);
+	reversed_second_half = reverse_list(slow);
+
+	result = compare_list(*head, reversed_second_half);
+
+	reverse_list(reversed_second_half);
+	return (result);
 }
