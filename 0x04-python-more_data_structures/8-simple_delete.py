@@ -4,7 +4,7 @@ def simple_delete(a_dictionary, key=""):
 
     Args:
        a_dictionary: The dictionary to be edited.
-       key: The key name reference the pair to be deleted. 
+       key: The key name reference the pair to be deleted.
 
     Return:
         The updated dictionary version.
