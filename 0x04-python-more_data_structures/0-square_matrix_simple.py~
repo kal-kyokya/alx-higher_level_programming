@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+def square_matrix_simple(matrix=[]):
+    '''Creates a matrix version where all elements are raised to 2.
+
+    Arg:
+        matrix: The original matrix.
+
+    Return:
+        The new matrix version.
+    '''
+    return [[num ** 2 for num in matrix[index]] for index in range(0, len(matrix))]
