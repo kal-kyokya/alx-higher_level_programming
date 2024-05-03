@@ -1,0 +1,15 @@
+#!/usr/bin/python3
+def search_replace(my_list, search, replace):
+    '''Creates a list version where all occurences of x are replaced by y.
+
+    Args:
+        my_list: List to be processed.
+        search: Element to be replaced.
+        replace: Replacement for all occurence of 'search'.
+
+    Return:
+        The new list version.
+    '''
+#    new_list = [replace if (num == search) else: num for num in my_list]
+#   return new_list
+    return list(map(lambda num : replace if (num == search) else: num, my_list))
