@@ -9,7 +9,7 @@ def best_score(a_dictionary):
         The key name with the biggest value, None otherwise.
     '''
     d = a_dictionary
-    if d == None:
+    if d is None:
         return None
     biggest = 0
     for num in d.values():
