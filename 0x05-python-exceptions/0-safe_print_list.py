@@ -11,8 +11,9 @@ def safe_print_list(my_list=[], x=0):
     try:
         for count in range(0, x):
             print(f"{my_list[count]}", end="")
+        print()
+        return count + 1
     except Exception:
         count -= 1
-    finally:
         print()
         return count + 1

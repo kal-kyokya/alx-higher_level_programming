@@ -9,12 +9,3 @@ nb_print = safe_print_list(my_list, len(my_list))
 print("nb_print: {:d}".format(nb_print))
 nb_print = safe_print_list(my_list, len(my_list) + 2)
 print("nb_print: {:d}".format(nb_print))
-
-my_list = [10, 20, 30, 40, 50, 10000, 2000, 300, 40, 5]
-
-nb_print = safe_print_list(my_list, 2)
-print("nb_print: {:d}".format(nb_print))
-nb_print = safe_print_list(my_list, len(my_list))
-print("nb_print: {:d}".format(nb_print))
-nb_print = safe_print_list(my_list, len(my_list) + 2)
-print("nb_print: {:d}".format(nb_print))
