@@ -9,7 +9,7 @@ def safe_print_division(a, b):
     Return:
         The value of the division
     '''
-    result = 0
+    result = 0.0
 
     try:
         result = a / b
@@ -17,4 +17,4 @@ def safe_print_division(a, b):
     except ZeroDivisionError:
         result = None
     finally:
-        print("Inisde result: {}".format(result))
+        print("Inside result: {}".format(result))
