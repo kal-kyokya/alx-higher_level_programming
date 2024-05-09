@@ -11,9 +11,9 @@ def list_division(my_list_1, my_list_2, list_length):
         A list of length 'list_length' containing the result of division.
     '''
     result_list = []
-    error = 0
 
     for count in range(0, list_length):
+        error = 0
         try:
             result_list.append(0)
             result_list[count] = my_list_1[count] / my_list_2[count]
