@@ -21,7 +21,7 @@ def list_division(my_list_1, my_list_2, list_length):
             error = 1
         except ZeroDivisionError:
             error = 2
-        except TypeError:
+        except (TypeError, ValueError):
             error = 3
         finally:
             if error == 1:
