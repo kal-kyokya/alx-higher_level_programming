@@ -9,8 +9,8 @@ def safe_print_integer_err(value):
         True if input is an integer, false otherwise.
     '''
     try:
-        print("{:d}".format(int(value)))
+        print("{:d}".format(value))
         return (True)
     except Exception as err:
-        print("Exception:", err)
+        print("Exception: {}".format(err))
         return (False)
