@@ -16,7 +16,7 @@ class Square():
         """
         try:
             int(user_size)
-            if user_size >= 0:
+            if user_size > 0:
                 self.__size = user_size
             else:
                 raise ValueError("size must be >= 0")
