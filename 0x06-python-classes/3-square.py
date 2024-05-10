@@ -19,7 +19,7 @@ class Square():
         if user_size < 0:
             raise ValueError("size must be >= 0")
 
-        self.__size = user_size
+        self.__size = int(user_size)
 
     def area(self):
         """Computes the Surface area of the square.
@@ -30,4 +30,4 @@ class Square():
         Return:
             The Area of a square of size 'user_size'.
         """
-        return (self.__size ** 2) 
+        return (self.__size ** 2)
