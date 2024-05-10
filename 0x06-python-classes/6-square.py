@@ -75,7 +75,7 @@ class Square():
         if self.__size is 0:
             print()
         else:
-            for new_lines in range (0, self.position[1]):
+            for new_lines in range(0, self.position[1]):
                 print()
             for row in range(0, self.__size):
                 for space in range(0, self.position[0]):
