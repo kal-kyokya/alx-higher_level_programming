@@ -1,85 +1,81 @@
 #!/usr/bin/python3
-"""No modules, therefore, no module descriptions."""
+"""No module description"""
 
 
-class Square():
-    """Enables creation and manipulations of a square.
-
-    Arttribute:
-        size: Numeral field defining the size of the square.
-    """
-    def __init__(self, user_size=0, position=(0, 0)):
-        """Constructs and initializes an 'self' object of type 'Square'.
-
-        Args:
-            user_size: Numeral value of 'size'.
-            position: Location at which to add space
+class Square:
+    """Defines a square"""
+    def __init__(self, size=0, position=(0, 0)):
+        """__init__ method
+        Arguments:
+            size: size attribute
         """
-        self.__size = user_size
-        self.__position = position
+        if type(size) is not int:
+            raise TypeError('size must be an integer')
+        elif size < 0:
+            raise ValueError('size must be >= 0')
+        elif type(position) is not tuple or len(position) != 2 or\
+                type(position[0]) is not int or\
+                type(position[1]) is not int or\
+                position[0] < 0 or position[1] < 0:
+            raise TypeError('position must be a tuple of 2 positive integers')
+        else:
+            self.__size = int(size)
+            self.__position = position
 
     @property
     def size(self):
-        """This is the GETTER METHOD for the field attribute size.
-
-        The SETTER METHOD follows right after.
-        """
-        return (self.__size)
+        """retrieves size"""
+        return(self.__size)
 
     @size.setter
-    def size(self, user_size):
-        if type(user_size) is not int:
-            raise TypeError("size must be an integer")
-        if user_size < 0:
-            raise ValueError("size must be >= 0")
+    def size(self, value):
+        """sets size to value
+        Arguments:
+            value: value to be set
+        """
+        if type(value) is not int:
+            raise TypeError('size must be an integer')
+        elif value < 0:
+            raise ValueError('size must be >= 0')
+        else:
+            self.__size = int(value)
 
-        self.__size = user_size
+    def area(self):
+        """area of a square is its size squared
+        Return:
+            current square area
+        """
+        return (self.__size * self.__size)
+
+    def my_print(self):
+        """prints a square"""
+        x, y = self.__position
+        if self.__size == 0:
+            print()
+        else:
+            for num in range(y):
+                print()
+            for i in range(self.__size):
+                for num in range(x):
+                    print(" ", end="")
+                for j in range(self.__size):
+                    print("#", end="")
+                print()
 
     @property
     def position(self):
-        """This is the GETTER METHOD for the field attribute position.
-
-        The SETTER METHOD follows right after.
-        """
-        return self.__position
+        """retrieves position"""
+        return (self.__position)
 
     @position.setter
-    def position(self, position):
+    def position(self, value):
+        """sets position
+        Arguments:
+            value: value to be set
+        """
         if type(value) is not tuple or len(value) != 2 or\
             type(value[0]) is not int or type(value[1]) is not int or\
                 value[0] < 0 or value[1] < 0:
             raise TypeError('position must be a tuple of 2 positive integers')
         else:
             self.__position = value
-
-    def area(self):
-        """Computes the Surface area of the square.
-
-        Args:
-            None.
-
-        Return:
-            The Area of a square of size 'user_size'.
-        """
-        return self.__size ** 2
-
-    def my_print(self):
-        """Prints a square of size user_size using the # characater.
-
-        Args:
-            None.
-
-        Return:
-            Nothing.
-        """
-        if self.__size is 0:
-            print()
-        else:
-            for new_lines in range(0, self.position[1]):
-                print()
-            for row in range(0, self.__size):
-                for space in range(0, self.position[0]):
-                    print(" ", end="")
-                for column in range(0, self.size):
-                    print("#", end="")
-                print()
