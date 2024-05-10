@@ -8,7 +8,7 @@ class Square():
     Attributes:
         size: Numeral value defining the size of the square.
     """
-    def __init__(self, user_size):
+    def __init__(self, user_size=0):
         """Constructs and initializes an instance 'self' of type 'Square'.
 
         Args:
@@ -19,7 +19,7 @@ class Square():
         if user_size < 0:
             raise ValueError("size must be >= 0")
 
-        self.__size = int(user_size)
+        self.__size = user_size
 
     def area(self):
         """Computes the Surface area of the square.
