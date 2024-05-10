@@ -14,10 +14,9 @@ class Square():
         Arg:
             user_size: Numeral value to be assigned to the size attribute.
         """
-        try:
-            int(user_size)
-            if user_size < 0:
-                raise ValueError("size must be >= 0")
-        except TypeError:
+        if type(user_size) is not int:
             raise TypeError("size must be an integer")
+        if user_size < 0:
+                raise ValueError("size must be >= 0")
+            
         self.__size = user_size
