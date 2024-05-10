@@ -8,13 +8,15 @@ class Square():
     Arttribute:
         size: Numeral field defining the size of the square.
     """
-    def __init__(self, user_size=0):
+    def __init__(self, user_size=0, position=(0, 0)):
         """Constructs and initializes an 'self' object of type 'Square'.
 
         Args:
             user_size: Numeral value of 'size'.
+            position: Location at which to add space
         """
         self.__size = user_size
+        self.__position = position
 
     @property
     def size(self):
@@ -32,6 +34,21 @@ class Square():
             raise ValueError("size must be >= 0")
 
         self.__size = user_size
+
+    @property
+    def position(self):
+        """This is the GETTER METHOD for the field attribute position.
+
+        The SETTER METHOD follows right after.
+        """
+        return self.__position
+
+    @position.setter
+    def position(self, position):
+        list(position)
+        position[1] = 0
+
+        self.position = tuple(position)
 
     def area(self):
         """Computes the Surface area of the square.
@@ -53,7 +70,12 @@ class Square():
         Return:
             Nothing.
         """
-        for row in range(0, self.__size):
-            for column in range(0, self.size):
-                print("#", end="")
+        if self.__size is 0:
             print()
+        else:
+            for row in range(0, self.__size):
+                for space in range(0, self.position[0]):
+                    print(" ", end="")
+                for column in range(0, self.size):
+                    print("#", end="")
+                print()
