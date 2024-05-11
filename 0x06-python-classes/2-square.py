@@ -2,7 +2,7 @@
 """No modules, therefore, no module descriptions"""
 
 
-class Square():
+class Square:
     """Enables creation and manipulation of a square.
 
     Attribute:

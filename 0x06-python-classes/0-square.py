@@ -2,6 +2,6 @@
 """No modules, therefore, no module descriptions"""
 
 
-class Square():
+class Square:
     """Facilitates creation of a square."""
     pass
