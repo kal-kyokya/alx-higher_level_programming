@@ -18,7 +18,8 @@ def matrix_divided(matrix, divisor):
     divided_matrix = []
 
     if isinstance(matrix[0], list) is not True:
-        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+        raise TypeError("matrix must be a matrix\
+ (list of lists) of integers/floats")
     if isinstance(divisor, (int, float)) is not True:
         raise TypeError("div must be a number")
     if divisor == 0:
