@@ -15,6 +15,14 @@
 -1
 >>> sum(-1.0, -2.0)
 -3
+>>> sum(1.0, 2)
+3
+>>> sum(1, 2.0)
+3
+>>> sum(-1.0, 2)
+1
+>>> sum(1.0, -2)
+-1
 >>> sum(1)
 99
 >>> sum(1.0)
@@ -50,4 +58,25 @@ TypeError: a must be an integer
 >>> sum(None)
 Traceback (most recent call last):
 	  ...
+TypeError: a must be an integer
+
+
+>>> sum(1, 2)
+3
+>>> sum(100, -2)
+98
+>>> sum(2)
+100
+>>> sum(100.3, -2)
+98
+>>> sum(4, "School")
+Traceback (most recent call last):
+TypeError: b must be an integer
+>>> sum(None)
+Traceback (most recent call last):
+TypeError: a must be an integer
+>>> sum(-2, 100.3)
+98
+>>> sum("School", 4)
+Traceback (most recent call last):
 TypeError: a must be an integer

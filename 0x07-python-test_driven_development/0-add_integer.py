@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+"""No modules imported, therefore, no module descriptions."""
+
+
 def add_integer(a, b=98):
     """Computes the sum of two numbers.
 
