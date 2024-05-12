@@ -1,0 +1,18 @@
+>> add(1, 2)
+>> 3
+>> add(1.0, 2.0)
+>> 3
+>> add(1)
+>> 99
+>> add(1.0)
+>> 99
+>> add('a')
+>> a must be an integer
+>> add(1, 'b')
+>> b must be an integer
+>> add("aa")
+>> a must be an integer
+>> add(1, "bb")
+>> b must be an integer
+>> add(None)
+>> a must be an integer

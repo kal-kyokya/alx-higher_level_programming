@@ -5,6 +5,25 @@
 def add_integer(a, b=98):
     """Computes the sum of two numbers.
 
+    >> add(1, 2)
+    >> 3
+    >> add(1.0, 2.0)
+    >> 3
+    >> add(1)
+    >> 99
+    >> add(1.0)
+    >> 99
+    >> add('a')
+    >> a must be an integer
+    >> add(1, 'b')
+    >> b must be an integer
+    >> add("aa")
+    >> a must be an integer
+    >> add(1, "bb")
+    >> b must be an integer
+    >> add(None)
+    >> a must be an integer
+
     Args:
         a: First number.
         b: Second number, whose default value is 98.
@@ -21,10 +40,9 @@ def add_integer(a, b=98):
 
 if __name__ == "__main__":
     import doctest
-    """This module provides our script with the method:
-        'testfile(<filne_name>)'
-    that automates testing of add function using
-    scenarios in the specified file.
+    """This module provides our Test file with a method:
+        testmod()
+    automatically running test for our add function.
     """
 
-    doctest.testfile("test/0-add_integer.txt")
+    doctest.testmod()
