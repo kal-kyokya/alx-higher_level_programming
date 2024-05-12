@@ -1,0 +1,16 @@
+import unittest
+"""This module provides our Test class with a parent class:
+    Testcase()
+containing all necessary methods and attributes
+required for evaluation of various test cases.
+"""
+
+class Test_add_class(unittest.TestCase):
+    """This class enables testing of the add function.
+
+    Parent Class:
+        TestCase from the unittest module imported above.
+    """
+    def testAdd(self):
+        self.assertIsInstance(a, (int, float))
+        self.assertIsInstance(b, (int, float))
