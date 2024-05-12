@@ -1,18 +1,29 @@
->> add(1, 2)
->> 3
->> add(1.0, 2.0)
->> 3
->> add(1)
->> 99
->> add(1.0)
->> 99
->> add('a')
->> a must be an integer
->> add(1, 'b')
->> b must be an integer
->> add("aa")
->> a must be an integer
->> add(1, "bb")
->> b must be an integer
->> add(None)
->> a must be an integer
+>>> sum = __import__('0-add_integer').add_integer
+>>> sum(1, 2)
+3
+>>> sum(1.0, 2.0)
+3
+>>> sum(1)
+99
+>>> sum(1.0)
+99
+>>> sum('a')
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+>>> sum(1, 'b')
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+>>> sum("aa")
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
+>>> sum(1, "bb")
+Traceback (most recent call last):
+	  ...
+TypeError: b must be an integer
+>>> sum(None)
+Traceback (most recent call last):
+	  ...
+TypeError: a must be an integer
