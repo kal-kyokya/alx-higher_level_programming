@@ -1,5 +1,7 @@
 #!/usr/bin/python3
-"""No modules imported, therefore, no module descriptions."""
+"""
+'0-add_integer' is numeral addition module.
+"""
 
 
 def add_integer(a, b=98):
