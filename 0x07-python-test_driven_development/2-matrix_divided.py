@@ -5,7 +5,7 @@
 
 
 def matrix_divided(matrix, divisor):
-    """Divides all numbers inside a matrix by divisor.
+    """Divides all numbers inside a matrix by a divisor.
 
     Args:
         matrix: The matrix to be perated on.
@@ -17,7 +17,8 @@ def matrix_divided(matrix, divisor):
     prev_list_len = 0
     divided_matrix = []
 
-    if isinstance(matrix[0], list) is not True:
+    if isinstance(matrix[0], list) is not True or\
+       isinstance(matrix, list) is not True:
         raise TypeError("matrix must be a matrix\
  (list of lists) of integers/floats")
     if isinstance(divisor, (int, float)) is not True:
