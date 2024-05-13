@@ -40,6 +40,8 @@ TypeError: matrix must be a matrix (list of lists) of integers/floats
 >>> matrix = [[1, 2], [3, 4]]
 >>> type(matrix)
 <class 'list'>
->>>
->>>
+
+>>> matrix = []
+>>> div(matrix, 2)
+[]
 >>>
