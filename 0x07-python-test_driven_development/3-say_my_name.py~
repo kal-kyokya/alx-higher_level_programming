@@ -1,7 +1,0 @@
-#!/usr/bin/python3
-"""
-'0-3say_my_name' is a string concatenation and printing module.
-"""
-
-
-def say_my_name(first_name, second_name):
