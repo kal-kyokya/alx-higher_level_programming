@@ -1,22 +1,22 @@
 >>> names_are = __import__('3-say_my_name').say_my_name
 
 >>> names_are("Dj", "Mère")
-Dj Mère
+My name is Dj Mère
 
 >>> names_are("Alliance", "Soeur")
-Alliance Soeur
+My name is Alliance Soeur
 
 >>> names_are("The", "Dem")
-The Dem
+My name is The Dem
 
 >>> names_are("Matutina", "Stella")
-Matutina Stella
+My name is Matutina Stella
 
 >>> names_are("DDM")
-DDM
+My name is DDM
 
 >>> names_are("", "Dem Bank")
-Dem Bank
+My name is Dem Bank
 
 >>> names_are(6, "god")
 Traceback (most recent call last):
@@ -34,16 +34,16 @@ Traceback (most recent call last):
 ValueError: two empty strings detected
 
 >>> names_are('F', 'U')
-F U
+My name is F U
 
 >>> names_are("A more or less very long first name for the user. It is provided by the programmer because he feels like it; freedom for all, though you rapping like you trynna free the slaveeeess. You, focused on the wrong 'free'. Yeah, I'm talkin' 'bout my N*gga", "Dave")
-A more or less very long first name for the user. It is provided by the programmer because he feels like it; freedom for all, though you rapping like you trynna free the slaveeeess. You, focused on the wrong 'free'. Yeah, I'm talkin' 'bout my N*gga Dave
+My name is A more or less very long first name for the user. It is provided by the programmer because he feels like it; freedom for all, though you rapping like you trynna free the slaveeeess. You, focused on the wrong 'free'. Yeah, I'm talkin' 'bout my N*gga Dave
 
->>> names_are("     J'ai", "l'bras tellement longs, je m'croît dans SPACE Jam")
-     J'ai l'bras tellement longs, je m'croît dans SPACE Jam
+>>> names_are("     J'ai", "l'bras tellement longs, je m'croît dans SPACE Jam") #doctest: +NORMALIZE_WHITESPACE
+My name is J'ai l'bras tellement longs, je m'croît dans SPACE Jam
 
 >>> names_are("  ", "Oblivion")
-Oblivion
+My name is Oblivion
 
 >>> names_are("John", "Smith")
 My name is John Smith
@@ -64,7 +64,7 @@ Traceback (most recent call last):
 TypeError: first_name must be a string
 
 >>> names_are("", "White")
-My name is  White
+My name is White
 
 >>>
 >>>
