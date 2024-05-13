@@ -26,12 +26,12 @@ def say_my_name(first_name, last_name=""):
         raise ValueError("two empty strings detected")
 
     if ((len(first_name) == 0 or
-        all(char == ' ' for char in first_name)) and
-        len(last_name) != 0):
+            all(char == ' ' for char in first_name)) and
+            len(last_name) != 0):
         print(f"{last_name}")
     elif ((len(last_name) == 0 or
-           all(char == ' ' for char in last_name)) and
-           len(first_name) != 0):
+            all(char == ' ' for char in last_name)) and
+            len(first_name) != 0):
         print(f"{first_name}")
     else:
         print(f"{first_name} {last_name}")
