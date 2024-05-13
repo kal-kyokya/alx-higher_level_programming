@@ -14,35 +14,27 @@ def matrix_divided(matrix, divisor):
     Return:
         The divided matrix version.
     """
-    prev_list_len = 0
     divided_matrix = []
 
-    if isinstance(matrix[0], list) is not True or\
-       isinstance(matrix, list) is not True:
-        raise TypeError("matrix must be a matrix\
- (list of lists) of integers/floats")
-    if isinstance(divisor, (int, float)) is not True:
+    if not isinstance(matrix, list) or\
+       not all(isinstance(row, list) for row in matrix):
+        raise TypeError(
+            "matrix must be a matrix (list of lists) of integers/floats")
+
+    if not isinstance(divisor, (int, float)):
         raise TypeError("div must be a number")
+
     if divisor == 0:
         raise ZeroDivisionError("division by zero")
-    for submatrix in matrix:
-        new_matrix = []
-        for num in submatrix:
-            if isinstance(num, (int, float)) is not True:
-                raise TypeError("matrix must be a matrix\
- (list of lists) of integers/floats")
-            new_num = num / divisor
-            if isinstance(new_num, float):
-                new_num = round(new_num, 2)
-            else:
-                int(new_num)
-            new_matrix.append(new_num)
-            if prev_list_len == 0:
-                prev_list_len = len(submatrix)
-            elif prev_list_len != len(submatrix):
-                raise TypeError("Each row of the matrix must\
- have the same size")
-        divided_matrix.append(new_matrix)
+
+    if not all(isinstance(n, (int, float)) for row in matrix for n in row):
+        raise ValueError("matrix elements must be integer or float")
+
+    if any(len(row) != len(matrix[0]) for row in matrix):
+        raise TypeError("Each row of the matrix must have the same size")
+
+    divided_matrix = [list(
+        map(lambda num: round(num / divisor, 2), row)) for row in matrix]
 
     return (divided_matrix)
 
