@@ -45,6 +45,27 @@ A more or less very long first name for the user. It is provided by the programm
 >>> names_are("  ", "Oblivion")
 Oblivion
 
+>>> names_are("John", "Smith")
+My name is John Smith
+
+>>> names_are("Bob") #doctest: +NORMALIZE_WHITESPACE
+My name is Bob
+
+>>> names_are(12, "White")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> names_are("White", 12)
+Traceback (most recent call last):
+TypeError: last_name must be a string
+
+>>> names_are(None, "White")
+Traceback (most recent call last):
+TypeError: first_name must be a string
+
+>>> names_are("", "White")
+My name is  White
+
 >>>
 >>>
 >>>
