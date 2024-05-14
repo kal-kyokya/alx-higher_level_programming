@@ -1,1 +1,1 @@
-This directory will contain all files reltaed to if...else loops in C.
+This directory will contain all files related to if...else loops in python.
