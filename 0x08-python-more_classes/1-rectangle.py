@@ -20,8 +20,8 @@ class Rectangle:
             input_width: User input for the width Attribute.
             input_height: User input for the height Attribute.
         """
-        self.__width = input_width
-        self.__height = input_height
+        self.width = input_width
+        self.height = input_height
 
     @property
     def width(self):
