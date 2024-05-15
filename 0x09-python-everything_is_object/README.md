@@ -1,4 +1,4 @@
-This directory will contain every generated files and subdirectory during the 0x04 ALX-Africa project on the Set and Dictionary data structures pertaining to Python3.
+This directory will contain every generated files and subdirectory during the 0x09 ALX-Africa project titled 'Everything is object'.
 
 GENERAL REQUIREMENTS:
 
@@ -14,3 +14,10 @@ GENERAL REQUIREMENTS:
 	     pycodestyle (version 2.8.*)
 ->	All files must be executable
 ->	The length of files will be tested using wc
+
+
+.txt ANSWER FILES:
+
+->	Only one line.
+->	No Shebang.
+->	All files should end with a new line.
