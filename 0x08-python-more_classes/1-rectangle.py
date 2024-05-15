@@ -14,7 +14,12 @@ class Rectangle:
     """
 
     def __init__(self, input_width=0, input_height=0):
-        """Constructor for the width and height Object Attributes."""
+        """Constructor for the width and height Object Attributes.
+
+        Args:
+            input_width: User input for the width Attribute.
+            input_height: User input for the height Attribute.
+        """
         self.__width = input_width
         self.__height = input_height
 
