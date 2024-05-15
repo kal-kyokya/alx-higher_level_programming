@@ -17,6 +17,7 @@ class Rectangle:
     """
 
     number_of_instances = 0
+
     def __init__(self, input_width=0, input_height=0):
         """Constructor for the width and height Object Attributes.
 
