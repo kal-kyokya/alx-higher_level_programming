@@ -8,10 +8,16 @@ class Rectangle:
     """
     This is the blueprint for all its instances of the 'Rectangle'.
 
-    Attributes:
+    Class Attribute:
+        number_of_instances: The number of created objects.
+
+    Instance Attributes:
         Width: Numeral value defining the width of the rectangle.
         Height: Numeral value defining the height of the rectangle.
     """
+
+    number_of_instances = 0
+    print_symbol = '#'
 
     def __init__(self, input_width=0, input_height=0):
         """Constructor for the width and height Object Attributes.
@@ -22,6 +28,8 @@ class Rectangle:
         """
         self.width = input_width
         self.height = input_height
+
+        type(self).number_of_instances += 1
 
     @property
     def width(self):
@@ -58,15 +66,18 @@ class Rectangle:
     def __str__(self):
         """informal string representation of the object.
 
-        It represents the rectangle using the '#' character.
+        It represents the rectangle using the an input symbol.
         """
         rect = []
         if self.width == 0 or self.height == 0:
             return ("")
-        char = '#' * self.width
         for h in range(self.height):
-            rect.append(char)
-        return ('\n'.join(rect))
+            for w in range(self.width):
+                rect.append(str(self.print_symbol))
+                if w == (self.width - 1)\
+                and (h != self.height - 1):
+                    rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
         """Official string representation of the object."""
@@ -75,6 +86,8 @@ class Rectangle:
     def __del__(self):
         """Overrides any call to the del command."""
         print("Bye rectangle...")
+
+        type(self).number_of_instances -= 1
 
     def area(self):
         """Method computing the area of the Rectangle object."""
