@@ -1,6 +1,10 @@
 #!/usr/bin/python3
+"""
+Unittests for max_integer([..]).
 
-"""Unittests for max_integer([..])."""
+It is run using:
+    'python3 -m unittest tests.6-max_integer_test 2>&1 '
+"""
 
 import unittest
 max_integer = __import__('6-max_integer').max_integer
