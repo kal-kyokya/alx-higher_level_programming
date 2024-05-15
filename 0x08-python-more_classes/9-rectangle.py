@@ -74,7 +74,20 @@ class Rectangle:
         Return:
             The bigger object, rect1 if they are equal.
         """
-        
+        if not isinstance(rect1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+
+        a1, a2 = [rect1.area(), rect2.area()]
+        if a1 >= a2:
+            return rect1
+        return rect2
+
+    @classmethod
+    def square(cls, size=0):
+        """Creates a rectangle of height and width equal to size"""
+        return cls(size, size)
 
     def __str__(self):
         """informal string representation of the object.
