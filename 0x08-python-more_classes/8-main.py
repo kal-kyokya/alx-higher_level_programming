@@ -1,18 +1,23 @@
 #!/usr/bin/python3
 Rectangle = __import__('8-rectangle').Rectangle
 
-my_rectangle_1 = Rectangle(8, 4)
-my_rectangle_2 = Rectangle(2, 3)
+rec1 = Rectangle(8, 4)
+rec2 = Rectangle(2, 3)
 
-if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
-    print("my_rectangle_1 is bigger or equal to my_rectangle_2")
+print('rec1 Area:', rec1.area(), '\nrec2 Area:', rec2.area())
+
+if rec1 is Rectangle.bigger_or_equal(rec1, rec2):
+    print("rec1 is bigger or equal to rec2")
 else:
-    print("my_rectangle_2 is bigger than my_rectangle_1")
+    print("rec2 is bigger than rec1")
 
 
-my_rectangle_2.width = 10
-my_rectangle_2.height = 5
-if my_rectangle_1 is Rectangle.bigger_or_equal(my_rectangle_1, my_rectangle_2):
-    print("my_rectangle_1 is bigger or equal to my_rectangle_2")
+rec2.width = 10
+rec2.height = 5
+
+print('rec1 Area:', rec1.area(), '\nrec2 Area:', rec2.area())
+
+if rec1 is Rectangle.bigger_or_equal(rec1, rec2):
+    print("rec1 is bigger or equal to rec2")
 else:
-    print("my_rectangle_2 is bigger than my_rectangle_1")
+    print("rec2 is bigger than rec1")
