@@ -55,6 +55,11 @@ class Rectangle:
             raise ValueError("height must be >= 0")
         self.__height = value
 
+    @height.deleter
+    def height(self):
+        print("Bye rectangle...")
+        self.__height = None
+
     def __str__(self):
         """informal string representation of the object.
 
