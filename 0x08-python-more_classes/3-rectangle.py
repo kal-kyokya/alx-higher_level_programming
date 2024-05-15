@@ -56,8 +56,13 @@ class Rectangle:
         self.__height = value
 
     def __str__(self):
-        """Dunder definition for string formating methods."""
+        """Dunder definition for string formating methods.
+
+        It represents the rectangle using the '#' character.
+        """
         rect = []
+        if self.width == 0 or self.height == 0:
+            return (rect)
         char = '#' * self.width
         for h in range(self.height):
             rect.append(char)
