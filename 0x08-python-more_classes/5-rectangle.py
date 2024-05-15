@@ -75,7 +75,7 @@ class Rectangle:
     def __del__(self):
         """Overrides any call to the del command."""
         print("Bye rectangle...")
-    
+
     def area(self):
         """Method computing the area of the Rectangle object."""
         return (self.__width * self.__height)
