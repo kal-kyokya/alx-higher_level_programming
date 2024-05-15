@@ -39,11 +39,6 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @width.deleter
-    def width(self):
-        print("Bye rectangle...")
-        self.__width = None
-
     @property
     def height(self):
         """Getter method for the height Attribute.
