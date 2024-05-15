@@ -39,11 +39,6 @@ class Rectangle:
             raise ValueError("width must be >= 0")
         self.__width = value
 
-    @width.deleter
-    def width(self):
-        print("Bye rectangle...")
-        self.__width = None
-
     @property
     def height(self):
         """Getter method for the height Attribute.
@@ -59,11 +54,6 @@ class Rectangle:
         if value < 0:
             raise ValueError("height must be >= 0")
         self.__height = value
-
-    @height.deleter
-    def height(self):
-        print("Bye rectangle...")
-        self.__height = None
 
     def __str__(self):
         """informal string representation of the object.
@@ -82,6 +72,10 @@ class Rectangle:
         """Official string representation of the object."""
         return (f"{self.__class__.__name__}({self.width}, {self.height})")
 
+    def __del__(self):
+        """Overrides any call to the del command."""
+        print("Bye rectangle...")
+    
     def area(self):
         """Method computing the area of the Rectangle object."""
         return (self.__width * self.__height)
