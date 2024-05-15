@@ -62,7 +62,7 @@ class Rectangle:
         """
         rect = []
         if self.width == 0 or self.height == 0:
-            return (rect)
+            return ("")
         char = '#' * self.width
         for h in range(self.height):
             rect.append(char)
