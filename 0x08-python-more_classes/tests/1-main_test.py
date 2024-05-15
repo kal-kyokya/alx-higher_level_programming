@@ -1,6 +1,16 @@
 #!/usr/bin/python3
-Rectangle = __import__('0-rectangle').Rectangle
+"""
+'1-main_test' is a test file for version 1 of a Rectangle Class.
+"""
 
-my_rectangle = Rectangle()
-print(type(my_rectangle))
-print(my_rectangle.__dict__)
+
+import unittest
+Rec = __import__('0-rectangle').Rectangle
+
+
+def Rectangle_test(unittest.Testcase):
+    """
+    Collection of test(s) performed on version 1 of a Rectangle Class.
+    """
+
+    def 
