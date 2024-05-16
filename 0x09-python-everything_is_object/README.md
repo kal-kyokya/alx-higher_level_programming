@@ -2,6 +2,8 @@ This directory will contain every generated files and subdirectory during the 0x
 
 GENERAL REQUIREMENTS:
 
+-- Python SCRIPTS --
+
 ->	Allowed editors:
 	    vi, vim, emacs
 ->	All files will be interpreted/compiled on Ubuntu 20.04 LTS using:
@@ -16,7 +18,7 @@ GENERAL REQUIREMENTS:
 ->	The length of files will be tested using wc
 
 
-.txt ANSWER FILES:
+-- .txt ANSWER FILES: --
 
 ->	Only one line.
 ->	No Shebang.
