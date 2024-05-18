@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-'2-is_same_class' is a class comparison module
+'3-is_same_class' is a class comparison module
 """
 
 
-def is_same_class(obj, a_class):
-    """Tells if an input object is 'exactly' belongs to the input class.
+def is_kind_of_class(obj, a_class):
+    """Tells if an input object belongs to the class or its subclass(es).
 
     Args:
         obj: Random object to be assessed.
@@ -14,4 +14,4 @@ def is_same_class(obj, a_class):
     Return:
         True if the object belongs to the class, False if not.
     """
-    return (type(obj) == a_class)
+    return (isinstance(obj, a_class))
