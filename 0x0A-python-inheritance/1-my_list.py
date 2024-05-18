@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-'1-my_list' is a subclass creation module 
+'1-my_list' is a subclass creation module
 """
 
 
@@ -24,6 +24,7 @@ class MyList(list):
     def print_sorted(self):
         """Prints a sorted version of a MyList object."""
         print(sorted(self))
+
 
 if __name__ == "__main__":
     import doctest
