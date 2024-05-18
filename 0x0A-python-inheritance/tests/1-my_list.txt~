@@ -1,0 +1,37 @@
+>>> MyList = __import__('1-my_list').MyList
+
+>>> l1 = MyList()
+
+>>> l1.append(1)
+>>> l1
+[1]
+>>> l1.append(2)
+>>> l1.append(a)
+Traceback (most recent call last):
+	  ...
+TypeError: Input must be an integer.
+
+>>> l1.append('a')
+Traceback (most recent call last):
+	  ...
+TypeError: Input must be an integer.
+
+>>> l1
+[1, 2]
+>>> l1.append(3.14)
+Traceback (most recent call last):
+	  ...
+TypeError: Input must be an integer.
+>>> l1.append("The Dem")
+Traceback (most recent call last):
+	  ...
+TypeError: Input must be an integer.
+
+>>> 
+>>>
+>>> 
+>>>
+>>> 
+>>>
+>>> 
+>>> 

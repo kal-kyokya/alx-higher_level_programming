@@ -1,0 +1,24 @@
+#!/usr/bin/python3
+"""
+'1-my_list' is a subclass creation module 
+"""
+
+
+class MyList(list):
+    """Derived class that only accepts integer inputs.
+
+    Parent Class:
+        list
+    """
+
+    def __init__(self):
+        """Constructs and initializes MyList's instances."""
+        pass
+
+    def print_sorted(self):
+        """Print a sorted version of a MyList object."""
+        print(self.sort())
+
+if __name__ = "__main__":
+    import doctest
+    doctest.testfile("1-my_list.txt")
