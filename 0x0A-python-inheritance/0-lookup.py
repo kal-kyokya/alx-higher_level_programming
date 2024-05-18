@@ -1,4 +1,4 @@
-#!usr/bin/python3
+#!/usr/bin/python3
 """
 '0-lookup' is an attributes and methods listing module.
 """
@@ -13,6 +13,4 @@ def lookup(obj):
     Return:
         A list of the attributes and methods.
     """
-    my_list = []
-    my_list = dir(obj)
-    return (my_list)
+    return (list(dir(obj)))
