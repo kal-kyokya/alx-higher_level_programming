@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-'2-is_same_class' is class comparision module
+'2-is_same_class' is a class comparison module
 """
 
 
@@ -12,6 +12,6 @@ def is_same_class(obj, a_class):
         a_class: Class to to be compared to.
 
     Return:
-        True if the object belongs to the class, False if not.
+        True if the object belongs 'exactly' to the class, False if not.
     """
     return (type(obj) == a_class)
