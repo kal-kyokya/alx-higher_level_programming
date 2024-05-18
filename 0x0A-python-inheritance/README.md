@@ -43,4 +43,4 @@ GENERAL REQUIREMENTS:
 
 (3) DOCUMENTATION
 
-->	Not use the words 'import' or 'from' inside comments, the checker will think these are attempts to import some modules
+->	No use of the words 'import' or 'from' inside comments, the checker will think these are attempts to import some modules
