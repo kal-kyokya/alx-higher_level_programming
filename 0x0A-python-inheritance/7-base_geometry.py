@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-'7-base_geometry' is a class creation module.
+'7-base_geometry' integer validator module.
 """
 
 
