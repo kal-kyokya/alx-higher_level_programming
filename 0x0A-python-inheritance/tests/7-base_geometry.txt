@@ -1,9 +1,35 @@
->>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
->>> integer_validator("my_int", 12)
->>> integer_validator("width", 89)
->>> integer_validator("name", "John")
-name must be an integer
->>> integer_validator("age", 0)
-age must be greater than 0
->>> integer_validator("distance", -4)
-distance must be greater than 0
+>>> BGeom = __import__('7-base_geometry').BaseGeometry
+>>> int_check = BGeom()
+>>> iv = int_check.integer_validator
+>>> iv("test", )
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+>>> iv("test", 0)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 27, in integer_validator
+    raise ValueError(f"{name} must be greater than 0")
+ValueError: test must be greater than 0
+>>> iv("test", -1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 27, in integer_validator
+    raise ValueError(f"{name} must be greater than 0")
+ValueError: test must be greater than 0
+>>> iv("test", number)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'number' is not defined
+>>> iv("test", "number")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 25, in integer_validator
+    raise TypeError(f"{name} must be an integer")
+TypeError: test must be an integer
+>>> iv("test", 15031999)
+>>>
+>>>
+>>>
+>>>
+>>
