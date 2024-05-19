@@ -4,7 +4,7 @@
 """
 
 
-def read_file(filename=None):
+def read_file(filename=""):
     """Reads an input file and prints it to stdout.
 
     Arg:
@@ -13,10 +13,6 @@ def read_file(filename=None):
     Return:
         Nothing.
     """
-
-    if filename == None or filename == "":
-        raise ValueError("[ValueError]: No input detected.")
-
     with open(filename, "r") as file:
-        my_file = file.read()
-        print(my_file)
+        content = file.read()
+        print(content)
