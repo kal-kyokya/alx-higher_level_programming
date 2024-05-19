@@ -3,7 +3,7 @@ read_file = __import__('0-read_file').read_file
 
 print(";-) " * 25, "\n")
 
-read_file("file0.txt")
+read_file("my_file_0.txt")
 
 print(";-) " * 25, "\n")
 
