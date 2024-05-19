@@ -6,6 +6,7 @@
 
 class BaseGeometry:
     """Empty class"""
+
     def __init__(self):
         """Constructs and Initializes any class' instance."""
         pass
