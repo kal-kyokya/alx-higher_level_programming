@@ -8,6 +8,9 @@ BaseGeometry = __import__('7-base_geometry').BaseGeometry
 class Rectangle(BaseGeometry):
     """Blueprint for all instances of type Rectangle.
 
+    Direct Parent Class:
+        BaseGeometry: First Superclass.
+
     Attributes:
         width: Rectangle object's Width.
         height: Rectangle object's Height.
@@ -26,7 +29,7 @@ class Rectangle(BaseGeometry):
         self.__height = input_height
 
     def area(self):
-        """Superclass method computing the area of Rectangle object.
+        """Method computing the area of Rectangle object.
 
         Arg:
             None.
