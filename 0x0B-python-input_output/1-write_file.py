@@ -5,7 +5,7 @@
 
 
 def write_file(filename="", text=""):
-    """Writes an input text inside a specific filename.
+    """Writes an input text in a specific file.
 
     Args:
         filename: Name of the file written into.
