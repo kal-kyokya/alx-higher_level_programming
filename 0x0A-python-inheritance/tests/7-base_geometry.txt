@@ -1,0 +1,27 @@
+>>> BGeom = __import__('7-base_geometry').BaseGeometry
+>>> int_check = BGeom()
+>>> int_check("Dem", 1)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: 'BaseGeometry' object is not callable
+>>> int_check.integer_validator("Dem", 1)
+>>> iv = int_check.integer_validator
+>>> iv = int_check.integer_validator()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: integer_validator() missing 2 required positional arguments: 'name' and 'value'
+>>> iv("Test", 1212)
+>>> iv("Test", "1, 2, 1, 2")
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+  File "/root/alx-higher_level_programming/0x0A-python-inheritance/7-base_geometry.py", line 25, in integer_validator
+    raise TypeError(f"{name} must be an integer")
+TypeError: Test must be an integer
+>>> iv(7, 005)
+  File "<stdin>", line 1
+    iv(7, 005)
+            ^
+SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+>>> iv(1503, 1999)
+>>>
+
