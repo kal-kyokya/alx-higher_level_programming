@@ -41,7 +41,7 @@ Traceback (most recent call last):
 	  ...
 TypeError: another invalid must be an integer
 
->>>
+>>> iv("width", 3.14)
 >>>
 >>>
 >>>

@@ -1,12 +1,12 @@
 # 7-base_geometry.txt
 
 =============================
-How to Use 7-base_geometry.py
+HOW TO USE 7-BASE_GEOMETRY.PY
 =============================
 
 This modules defines a base geometry class BaseGeometry.
 
-Instantiation
+INSTANTIATION
 =============
 
 ``BaseGeometry`` includes no attributes, and accordingly is initialized 
@@ -33,7 +33,7 @@ in a TypeError.
 Traceback (most recent call last):
 TypeError: ...
 
-Methods
+METHODS
 =======
 
 ``BaseGeometry`` features two methods - ``area(self)`` and 
@@ -54,7 +54,7 @@ Traceback (most recent call last):
 Exception: area() is not implemented
 
 The second method, ``integer_validator(...)``, validates the integer value
-of a paramter. The first parameter, ``name``, is the name of the argument to
+of a parameter. The first parameter, ``name``, is the name of the argument to
 check. The second argument, ``value``, is the argument to check.
 
 ::
@@ -81,6 +81,8 @@ TypeError: invalid number must be an integer
 ::
 
 >>> bg.integer_validator("another invalid", True)
+Traceback (most recent call last):
+TypeError: another invalid must be an integer
 
 ::
 
