@@ -14,6 +14,4 @@ def to_json_string(my_obj):
     Return:
         The JSON representation.
     """
-    with open("JavaSON.json", "w") as json_file:
-        json_file = json.dumps(my_obj)
-    return(json_file)
+    return(json.dumps(my_obj))

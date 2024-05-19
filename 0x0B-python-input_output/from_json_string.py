@@ -14,6 +14,4 @@ def from_json_string(my_str):
     Return:
         The Python object.
     """
-    with open("JavaSON.json", "r") as json_file:
-        json_file = json.load(my_str)
-    return(json_file)
+    return(json.loads(my_str))
