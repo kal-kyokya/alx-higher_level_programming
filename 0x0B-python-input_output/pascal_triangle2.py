@@ -1,8 +1,12 @@
 #!/usr/bin/python3
+"""
+'12-pascal_triangle' is a list of lists creation module.
+"""
+
 
 def pascal_triangle(n):
+    """Generates a pascal triangle using lists."""
 
-    print(f"\tn: {n}\n")
     pascTrg = []
     count = 1
 
@@ -32,16 +36,13 @@ def pascal_triangle(n):
         index += 1
         rvs_i -= 1
 
-        print(f"count: {count} -- i: {index} -- r_i: {rvs_i}")
         while index <= rvs_i:
             pascRow[index] = pascTrg[- 1][index - 1] + pascTrg[- 1][index]
             pascRow[rvs_i] = pascRow[index]
             index += 1
             rvs_i -= 1
 
-        print(f"{pascRow}")
         pascTrg.append(pascRow)
-        print(f"{pascTrg}\n")
         count += 1
 
     return (pascTrg)

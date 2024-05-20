@@ -14,6 +14,6 @@ def print_triangle(triangle):
 
 
 if __name__ == "__main__":
-    for value in range(0, 25):
+    for value in range(0, 11):
         print_triangle(pascal_triangle(value))
         print(";););););););););););););)")
