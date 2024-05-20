@@ -7,6 +7,7 @@ def pascal_triangle(n):
     count = 1
 
     if n <= 0:
+        pascTrg.append([])
         return (pascTrg)
 
     while count <= n:
