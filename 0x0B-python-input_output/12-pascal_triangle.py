@@ -4,45 +4,31 @@
 """
 
 
-def pascal_triangle(n):
-    """Generates a pascal triangle using lists."""
+def pascal_triangle(input_num):
+    """Generates a pascal triangle using lists.
 
-    pascTrg = []
-    count = 1
+    Arg:
+        input_num: Base of generated pascal triangle.
 
-    if n <= 0:
-        pascTrg.append([])
-        return (pascTrg)
-
-    while count <= n:
-        pascRow = [0] * count
+    Return:
+        A list representation of the generated triangle.
+    """
+    if input_num <= 0:
+        return ([])
+    pascTrg = [[1]]
+    for row in range(2, input_num + 1):
+        pascRow = [0] * row
         index = 0
-        rvs_i = count - 1
-
-        if count == 1:
-            pascTrg.append([1])
-            if n == 1:
-                return (pascTrg)
-            count += 1
-            continue
-
-        pascRow[index] = 1
-        pascRow[rvs_i] = pascRow[index]
+        rvs_i = row - 1
+        pascRow[index] = pascRow[rvs_i] = 1
         index += 1
         rvs_i -= 1
-
-        pascRow[index] = count - index
-        pascRow[rvs_i] = pascRow[index]
+        pascRow[rvs_i] = pascRow[index] = row - index
         index += 1
         rvs_i -= 1
-
         while index <= rvs_i:
-            pascRow[index] = pascTrg[- 1][index - 1] + pascTrg[- 1][index]
-            pascRow[rvs_i] = pascRow[index]
+            pascRow[rvs_i] = pascRow[index] = pascTrg[- 1][index - 1] + pascTrg[- 1][index]
             index += 1
             rvs_i -= 1
-
         pascTrg.append(pascRow)
-        count += 1
-
     return (pascTrg)
