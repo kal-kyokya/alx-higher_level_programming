@@ -1,4 +1,4 @@
-This repository is home to all files needed for successful completion of the Errors and Exceptions project provided by ALX Africa to the Software Engineering program.
+This directory is home to all files needed for successful completion of the Errors and Exceptions project provided by ALX Africa to the Software Engineering program.
 
 GENERAL REQUIREMENTS:
 

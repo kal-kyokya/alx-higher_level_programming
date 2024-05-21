@@ -1,4 +1,4 @@
-This repository is home to all files needed for successful completion of the 0x08 Python provided by ALX Africa to the Software Engineering program.
+This directory is home to all files needed for successful completion of the 0x08 Python provided by ALX Africa to the Software Engineering program.
 
 GENERAL REQUIREMENTS:
 
