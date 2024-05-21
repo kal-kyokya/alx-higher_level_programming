@@ -24,6 +24,6 @@ class Square(Rectangle):
 
     def __str__(self):
         """Overrides the string representation of the 'self' object."""
-        return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+        return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
                                                  self.id, self.x, self.y,
-                                                 self.width, self.height))
+                                                 self.height))
