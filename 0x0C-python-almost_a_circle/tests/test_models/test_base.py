@@ -12,7 +12,7 @@
 '0-main' is the unit test for '/models/base.py'.
 """
 import unittest
-from base import Base
+from models.base import Base
 
 
 class BaseTestClass(unittest.TestCase):
