@@ -10,6 +10,21 @@ if __name__ == "__main__":
         print("[{}] {}".format(e.__class__.__name__, e))
 
     try:
+        Rectangle(10, None)
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
+        Rectangle(10, d)
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
+        Rectangle(10, 3.14)
+    except Exception as e:
+        print("[{}] {}".format(e.__class__.__name__, e))
+
+    try:
         r = Rectangle(10, 2)
         r.width = -10
     except Exception as e:
