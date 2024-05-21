@@ -23,9 +23,25 @@ class Rectangle(Base):
         """
 
         super().__init__(id)
+        if not isinstance(input_w, int):
+            raise TypeError("width must be an integer")
+        if input_w <= 0:
+            raise ValueError("width must be > 0")
         self.__width = input_w
+        if not isinstance(input_h, int):
+            raise TypeError("height must be an integer")
+        if input_h <= 0:
+            raise ValueError("height must be > 0")
         self.__height = input_h
+        if not isinstance(input_x, int):
+            raise TypeError("x must be an integer")
+        if input_x < 0:
+            raise ValueError("x must be >= 0")
         self.__x = input_x
+        if not isinstance(input_y, int):
+            raise TypeError("y must be an integer")
+        if input_y < 0:
+            raise ValueError("y must be >= 0")
         self.__y = input_y
 
     @property
