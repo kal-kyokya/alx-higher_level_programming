@@ -1,1 +1,0 @@
-This directory will contain all python files and directories generated during completion of the 0x0C ALX Higher Level Programming Project.
