@@ -1,4 +1,4 @@
-This repository is home to all files needed for successful completion of the Classes and Objects project provided by ALX Africa to the Software Engineering program.
+This directory is home to all files needed for successful completion of the 0x0C-Almost_a_circle project provided by ALX Africa to the Software Engineering program.
 
 GENERAL REQUIREMENTS:
 
@@ -25,15 +25,21 @@ GENERAL REQUIREMENTS:
 	     python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
 ->	A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 
-(2) PYTHON TEST CASES
+(2) PYTHON UNIT TESTs
 
 ->	Allowed editors:
 	    vi, vim, emacs
 ->	All files should end with a new line
 ->	All test files should be inside a folder tests
-->	All test files should be text files (extension: .txt)
-->	All tests should be executed by using this command:
-	    python3 -m doctest ./tests/*
+->	The unittest module has to be used.
+->	All test files should be python files (extension: .py)
+->	All test files and folders should start with test_
+->	The file organization in the tests folder should be the same as the project's:
+	    Example: for models/base.py, unit tests must be in:
+	    	tests/test_models/test_base.py
+->	All tests should be executed by using any of commands:
+	    python3 -m unittest discover tests
+	    python3 -m unittest tests/test_models/test_base.py
 ->	All  modules should have a documentation:
 	     python3 -c 'print(__import__("my_module").__doc__)'
 ->	All  functions (inside and outside a class) should have a documentation:
