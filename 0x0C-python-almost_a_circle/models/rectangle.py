@@ -133,10 +133,13 @@ class Rectangle(Base):
                                                  self.id, self.x, self.y,
                                                  self.width, self.height))
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """Reassigns n  specific object attributes.
 
         Arg:
+          IF 'ARGS' DOESN'T EXIST OR IS EMPTY:
+            kwargs: A collection of 'Key=value' pairs linked to attributes.
+          ELSE:
             args: A tuple representation of the new values:
               ->  1st argument should be the id attribute
               ->  2nd argument should be the width attribute
@@ -144,13 +147,29 @@ class Rectangle(Base):
               ->  4th argument should be the x attribute
               ->  5th argument should be the y attribute
         """
-        if len(args) == 1:
-            super().__init__(args[0])
-        if len(args) == 2:
-            self.width = args[1]
-        if len(args) == 3:
-            self.height = args[2]
-        if len(args) == 4:
-            self.x = args[3]
-        if len(args) == 5:
-            self.y = args[4]
+
+        if len(args) == 0:
+            for attr, value in kwargs.items():
+                if attr == "id":
+                    super().__init__(value)
+                elif attr == "width":
+                    self.width = value
+                elif attr == "height":
+                    self.height = value
+                elif attr == "x":
+                    self.x = value
+                elif attr == "y":
+                    self.y = value
+        else:
+            if len(args) >= 1:
+                super().__init__(args[0])
+            if len(args) >= 2:
+                self.width = args[1]
+            if len(args) >= 3:
+                self.height = args[2]
+            if len(args) >= 4:
+                self.x = args[3]
+            if len(args) >= 5:
+                self.y = args[4]
+            if len(args) > 5:
+                raise ValueError("Clash in arguments detected.")
