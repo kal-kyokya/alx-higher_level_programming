@@ -44,4 +44,6 @@ class Square(Rectangle):
         if input_value <= 0:
             raise ValueError("size must be > 0")
         self.__size = input_value
+        self.__width = input_value
+        self.__height = input_value
         return (self.__size)
