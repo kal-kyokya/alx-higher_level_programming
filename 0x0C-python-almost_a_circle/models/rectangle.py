@@ -122,3 +122,9 @@ class Rectangle(Base):
             for w in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """Overrides the string representation of the 'self' object."""
+        return ("[{}] ({}) {}/{} - {}/{}".format(self.__class__.__name__,
+                                                 self.id, self.x, self.y,
+                                                 self.width, self.height))
