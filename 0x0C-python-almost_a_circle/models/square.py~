@@ -1,0 +1,12 @@
+#!/usr/bin/python
+"""
+'square' is a class creation module
+"""
+from models.base import Rectangle
+
+
+class Square(Rectangle):
+    """
+
+
+    """
