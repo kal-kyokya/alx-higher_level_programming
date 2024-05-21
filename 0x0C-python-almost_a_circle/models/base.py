@@ -2,6 +2,7 @@
 """
 'base' is a class creation module
 """
+import os.path
 
 
 class Base:
