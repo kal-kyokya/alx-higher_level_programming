@@ -45,5 +45,22 @@ class Square(Rectangle):
             raise ValueError("size must be > 0")
         self.__size = input_value
         self.__width = input_value
+        return (self.__size)
+
+    @property
+    def size(self):
+        """Getter for the attribute 'size'.
+
+        The setter follows right after.
+        """
+        return (self.__size)
+
+    @size.setter
+    def size(self, input_value):
+        if not isinstance(input_value, int):
+            raise TypeError("size must be an integer")
+        if input_value <= 0:
+            raise ValueError("size must be > 0")
+        self.__size = input_value
         self.__height = input_value
         return (self.__size)
