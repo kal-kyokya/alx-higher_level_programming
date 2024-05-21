@@ -1,8 +1,7 @@
-#/usr/bin/python3
+#!/usr/bin/python3
 """
 'base' is a class creation module
 """
-import os.path
 
 
 class Base:
