@@ -20,14 +20,13 @@ class Square(Rectangle):
             input_x: Extra width unit.
             input_y: Extra height unit.
         """
-        self.__size = input_size
-        super().__init__(self.__size, self.__size, input_x, input_y, id)
+        super().__init__(input_size, input_size, input_x, input_y, id)
 
     def __str__(self):
         """Overrides the string representation of the 'self' object."""
         return ("[{}] ({}) {}/{} - {}".format(self.__class__.__name__,
                                               self.id, self.x, self.y,
-                                              self.size))
+                                              self.width))
 
     @property
     def size(self):
@@ -35,32 +34,10 @@ class Square(Rectangle):
 
         The setter follows right after.
         """
-        return (self.__size)
+        return (self.width)
 
     @size.setter
     def size(self, input_value):
-        if not isinstance(input_value, int):
-            raise TypeError("size must be an integer")
-        if input_value <= 0:
-            raise ValueError("size must be > 0")
-        self.__size = input_value
-        self.__width = input_value
-        return (self.__size)
-
-    @property
-    def size(self):
-        """Getter for the attribute 'size'.
-
-        The setter follows right after.
-        """
-        return (self.__size)
-
-    @size.setter
-    def size(self, input_value):
-        if not isinstance(input_value, int):
-            raise TypeError("size must be an integer")
-        if input_value <= 0:
-            raise ValueError("size must be > 0")
-        self.__size = input_value
-        self.__height = input_value
-        return (self.__size)
+        self.width = input_value
+        self.height = input_value
+        return (self.width)
