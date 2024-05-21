@@ -1,1 +1,1 @@
-This directory will contain all python files generated as test cases or test suites during completion of the 0x0C ALX Higher Level Programming Program.
+This directory will contain all python files and directories generated during completion of the 0x0C ALX Higher Level Programming Project.
