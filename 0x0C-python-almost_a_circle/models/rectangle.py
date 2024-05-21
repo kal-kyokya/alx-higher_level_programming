@@ -16,10 +16,10 @@ class Rectangle(Base):
         """Constructs and Initializes all instances of class Rectangle.
 
         Args:
-            
-            
-            
-            
+            input_w: Width of the Rectangle.
+            input_h: Height of the rectangle.
+            input_x: Extra width unit.
+            input_y: Extra height unit.
         """
 
         super().__init__(id)
