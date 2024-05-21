@@ -148,7 +148,7 @@ class Rectangle(Base):
               ->  5th argument should be the y attribute
         """
 
-        if len(args) == 0:
+        if len(args) == 0 or args is None:
             for attr, value in kwargs.items():
                 if attr == "id":
                     super().__init__(value)
