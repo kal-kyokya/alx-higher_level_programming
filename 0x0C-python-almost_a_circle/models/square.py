@@ -20,8 +20,8 @@ class Square(Rectangle):
             input_x: Extra width unit.
             input_y: Extra height unit.
         """
-        super().__init__(input_size, input_size, input_x, input_y, id)
         self.__size = input_size
+        super().__init__(self.__size, self.__size, input_x, input_y, id)
 
     def __str__(self):
         """Overrides the string representation of the 'self' object."""
