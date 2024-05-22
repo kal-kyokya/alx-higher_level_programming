@@ -104,7 +104,10 @@ class Base:
             return obj_list
 
         with open(filename, "r") as json_file:
-            dictionary_list = json.load(json_file)
-            for obj in dictionary_list:
-                obj_list.append(cls.create(**obj))
-            return obj_list
+            json_str = json_file.read()
+
+        dictionary_list = cls.from_json_string(json_str)
+
+        for index in range(len(dictionary_list)):
+            obj_list.append(cls.create(**dictionary_list[index]))
+        return obj_list
