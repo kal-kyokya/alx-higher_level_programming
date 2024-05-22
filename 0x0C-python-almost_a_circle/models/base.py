@@ -50,3 +50,19 @@ class Base:
         if lst is None or len(lst) == 0:
             return ("[]")
         return (json.dumps(lst))
+
+    @classmethod
+    def save_to_file(cls, listOfObjs):
+        """Writes a JSON repr. of a list into a json file.
+
+        Arg:
+            listOfObjs: A list of one or many class instance.
+        """
+        with open("Rectangle.json", "w") as json_file:
+            if listOfObjs is None or len(listOfObjs) == 0:
+                pass
+            else:
+                listOfDicts = []
+                for obj in listOfObjs:
+                    listOfDicts.append(cls.to_dictionary(obj))
+                json.dump(listOfDicts, json_file)
