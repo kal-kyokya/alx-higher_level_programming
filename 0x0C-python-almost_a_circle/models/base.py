@@ -5,6 +5,7 @@
 import json
 import os
 
+
 class Base:
     """Blueprint for all instances of type Base.
 
