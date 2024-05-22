@@ -67,3 +67,14 @@ class Base:
                     listOfDicts.append(cls.to_dictionary(obj))
             cls.to_json_string(listOfDicts)
             json.dump(listOfDicts, json_file)
+
+    @staticmethod
+    def from_json_string(json_string):
+        """Returns a list of dictionaries from the JSON format.
+
+        Arg:
+            json_string: A JSON string.
+        """
+        if json_string is None or len(json_string) == 0:
+            return ("[]")
+        return (json.loads(json_string))
