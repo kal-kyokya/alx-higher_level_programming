@@ -139,4 +139,8 @@ class Rectangle(Base):
 
     def to_dictionary(self):
         """"returns the dictionary representation of a Rectangle."""
-        return (self.__dict__)
+        list_attr = ['id', 'width', 'height', 'x', 'y']
+        new_dict = {}
+        for key in list_attr:
+            new_dict[key] = getattr(self, key)
+        return (new_dict)
