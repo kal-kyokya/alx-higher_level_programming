@@ -152,3 +152,7 @@ class Rectangle(Base):
                 self.y = args[4]
             if len(args) > 5:
                 raise ValueError("Clash in arguments detected.")
+
+    def to_dictionary(self):
+        """"returns the dictionary representation of a Rectangle."""
+        return self.__dict__
