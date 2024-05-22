@@ -2,8 +2,6 @@
 """
 A test file
 """
-
-
 import unittest
 from models.base import Base
 
