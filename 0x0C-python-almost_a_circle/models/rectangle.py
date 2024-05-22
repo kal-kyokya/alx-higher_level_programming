@@ -126,7 +126,6 @@ class Rectangle(Base):
               ->  4th argument should be the x attribute
               ->  5th argument should be the y attribute
         """
-
         if args is not None and len(args) != 0:
             list_attr = ['id', 'width', 'height', 'x', 'y']
             if len(args) >= 1:
