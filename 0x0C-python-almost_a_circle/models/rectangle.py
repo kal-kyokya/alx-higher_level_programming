@@ -21,12 +21,11 @@ class Rectangle(Base):
             input_x: Extra width unit.
             input_y: Extra height unit.
         """
-
         super().__init__(id)
-        self.__width = input_w
-        self.__height = input_h
-        self.__x = input_x
-        self.__y = input_y
+        self.width = input_w
+        self.height = input_h
+        self.x = input_x
+        self.y = input_y
 
     @property
     def width(self):
@@ -38,12 +37,11 @@ class Rectangle(Base):
 
     @width.setter
     def width(self, input_value):
-        if type(input_value) is int:
+        if type(input_value) is not int:
             raise TypeError("width must be an integer")
         if input_value <= 0:
             raise ValueError("width must be > 0")
         self.__width = input_value
-        return (self.__width)
 
     @property
     def height(self):
@@ -55,12 +53,11 @@ class Rectangle(Base):
 
     @height.setter
     def height(self, input_value):
-        if type(input_value) is int:
+        if type(input_value) is not int:
             raise TypeError("height must be an integer")
         if input_value <= 0:
             raise ValueError("height must be > 0")
         self.__height = input_value
-        return (self.__height)
 
     @property
     def x(self):
@@ -72,12 +69,11 @@ class Rectangle(Base):
 
     @x.setter
     def x(self, input_value):
-        if type(input_value) is int:
+        if type(input_value) is not int:
             raise TypeError("x must be an integer")
         if input_value < 0:
             raise ValueError("x must be >= 0")
         self.__x = input_value
-        return (self.__x)
 
     @property
     def y(self):
@@ -89,12 +85,11 @@ class Rectangle(Base):
 
     @y.setter
     def y(self, input_value):
-        if type(input_value) is int:
+        if type(input_value) is not int:
             raise TypeError("y must be an integer")
         if input_value < 0:
             raise ValueError("y must be >= 0")
         self.__y = input_value
-        return (self.__y)
 
     def area(self):
         """Computes the area of the rectangle."""

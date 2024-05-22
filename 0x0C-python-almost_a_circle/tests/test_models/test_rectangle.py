@@ -45,6 +45,42 @@ class RectangleTest(unittest.TestCase):
         self.assertEqual(self.rect.x , 79)
         self.assertEqual(self.rect.y , 67)
 
+    def test_types(self):
+        """Type Exceptions raised"""
+        with self.assertRaises(TypeError) as error1:
+            self.rect.width = 91.7
+        self.assertEqual(str(error1.exception), "width must be an integer")
+
+        with self.assertRaises(TypeError) as error2:
+            self.rect.height = "83"
+        self.assertEqual(str(error2.exception), "height must be an integer")
+
+        with self.assertRaises(TypeError) as error4:
+            self.rect.x = {79, 97}
+        self.assertEqual(str(error4.exception), "x must be an integer")
+
+        with self.assertRaises(TypeError) as error5:
+            self.rect.y = 'a'
+        self.assertEqual(str(error5.exception), "y must be an integer")
+
+    def test_values(self):
+        """Value Exceptions raised"""
+        with self.assertRaises(ValueError) as error1:
+            self.rect.width = -91
+        self.assertEqual(str(error1.exception), "width must be > 0")
+
+        with self.assertRaises(ValueError) as error2:
+            self.rect.height = -10
+        self.assertEqual(str(error2.exception), "height must be > 0")
+
+        with self.assertRaises(ValueError) as error4:
+            self.rect.x = -79
+        self.assertEqual(str(error4.exception), "x must be >= 0")
+
+        with self.assertRaises(ValueError) as error5:
+            self.rect.y = -1001
+        self.assertEqual(str(error5.exception), "y must be >= 0")
+
 
 
 if __name__ == "__main__":
