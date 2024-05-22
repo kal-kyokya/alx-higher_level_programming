@@ -59,11 +59,11 @@ class Base:
             listOfObjs: A list of one or many class instance.
         """
         with open(f"{cls.__name__}.json", "w") as json_file:
+            listOfDicts = []
             if listOfObjs is None or len(listOfObjs) == 0:
                 pass
             else:
-                listOfDicts = []
                 for obj in listOfObjs:
                     listOfDicts.append(cls.to_dictionary(obj))
-                cls.to_json_string(listOfDicts)
-                json.dump(listOfDicts, json_file)
+            cls.to_json_string(listOfDicts)
+            json.dump(listOfDicts, json_file)
