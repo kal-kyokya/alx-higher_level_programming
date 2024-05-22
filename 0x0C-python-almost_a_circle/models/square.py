@@ -44,7 +44,7 @@ class Square(Rectangle):
 
     def update(self, *args, **kwargs):
         """ update method """
-        if args is not None and len(args) is not 0:
+        if args is not None and len(args) != 0:
             list_atr = ['id', 'size', 'x', 'y']
             for i in range(len(args)):
                 if list_atr[i] == 'size':
@@ -59,3 +59,11 @@ class Square(Rectangle):
                     setattr(self, 'height', value)
                 else:
                     setattr(self, key, value)
+
+    def to_dictionary(self):
+        """"returns the dictionary representation of a Square."""
+        list_attr = ['id', 'size', 'x', 'y']
+        new_dict = {}
+        for key in list_attr:
+            new_dict[key] = getattr(self, key)
+        return (new_dict)
