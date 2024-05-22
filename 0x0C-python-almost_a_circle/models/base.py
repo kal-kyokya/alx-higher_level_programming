@@ -3,7 +3,7 @@
 'base' is a class creation module
 """
 import json
-
+import os
 
 class Base:
     """Blueprint for all instances of type Base.
@@ -98,11 +98,13 @@ class Base:
     def load_from_file(cls):
         """Reads a JSON repr. into a list from a json file."""
         obj_list = []
-        try:
-            with open(f"{cls.__name__}.json", "r") as json_file:
-                dictionary_list = json.load(json_file)
-                for obj in dictionary_list:
-                    obj_list.append(cls.create(**obj))
-                return obj_list
-        except FileNotFoundError:
+        filename = f"{cls.__name__}.json"
+
+        if os.path.exists(filename) is False:
+            return obj_list
+
+        with open(filename, "r") as json_file:
+            dictionary_list = json.load(json_file)
+            for obj in dictionary_list:
+                obj_list.append(cls.create(**obj))
             return obj_list
