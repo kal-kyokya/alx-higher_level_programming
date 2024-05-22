@@ -82,6 +82,15 @@ class RectangleTest(unittest.TestCase):
         """Correct area value"""
         self.assertEqual(self.rect.area(), self.rect.width * self.rect.height)
 
+    def test_str(self):
+        """Right output for str call"""
+        self.rect = Rectangle(5, 5, 1)
+        self.assertEqual(
+            str(self.rect), str(
+                "[{}] ({}) {}/{} - {}/{}".format(self.rect.__class__.__name__,
+                                                 self.rect.id, self.rect.x, self.rect.y,
+                                                 self.rect.width, self.rect.height)))
+
 
 if __name__ == "__main__":
     unittest.main()
