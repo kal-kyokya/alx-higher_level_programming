@@ -2,6 +2,7 @@
 """
 'base' is a class creation module
 """
+import json
 
 
 class Base:
@@ -37,3 +38,15 @@ class Base:
     def id(self, input_value):
         self.__id = input_value
         return (self.__id)
+
+    @staticmethod
+    def to_json_string(listOfDicts):
+        """Returns a JSON format of the input list of dictionaries.
+
+        Arg:
+            listOfDicts: A list of one or many dictionaries.
+        """
+        lst = listOfDicts
+        if lst is None or len(lst) == 0:
+            return ("[]")
+        return (json.dumps(lst))
