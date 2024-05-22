@@ -93,3 +93,16 @@ class Base:
 
         new_obj.update(**dictionary)
         return (new_obj)
+
+    @classmethod
+    def load_from_file(cls):
+        """Reads a JSON repr. into a list from a json file."""
+        obj_list = []
+        try:
+            with open(f"{cls.__name__}.json", "r") as json_file:
+                dictionary_list = json.load(json_file)
+                for obj in dictionary_list:
+                    obj_list.append(cls.create(**obj))
+                return obj_list
+        except FileNotFoundError:
+            return obj_list
