@@ -131,6 +131,5 @@ class TestRectangleMethods(unittest.TestCase):
                                                  self.rect.width, self.rect.height)))
 
 
-
 if __name__ == "__main__":
     unittest.main()
