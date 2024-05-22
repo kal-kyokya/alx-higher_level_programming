@@ -16,30 +16,28 @@ import unittest
 from models.base import Base
 
 
-class BaseTestClass(unittest.TestCase):
+class BaseTest(unittest.TestCase):
     """Class of test methods for the Base class and its instances.
 
     Parent Class:
         TestCase: Sub class of the built-in unittest module.
     """
 
-    def testBaseClass1(self):
-        """First test of creation of a Base class instance."""
+    def setUp(self):
+        """Initializes values to be create before each test."""
+        Base.nb_objects = 0
+
+    def test_id_value(self):
+        """Correct creation of Base instance"""
         obj1 = Base()
         self.assertEqual(obj1.id, 1)
 
-    def testBaseClass2(self):
-        """Second test of creation of a Base class instance."""
         obj2 = Base()
         self.assertEqual(obj2.id, 2)
 
-    def testBaseClass3(self):
-        """Third test of creation of a Base class instance."""
         obj3 = Base(25)
         self.assertEqual(obj3.id, 25)
 
-    def testBaseClass4(self):
-        """Fourth test of creation of a Base class instance."""
         obj4 = Base()
         self.assertEqual(obj4.id, 3)
 
