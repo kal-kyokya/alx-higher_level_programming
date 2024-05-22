@@ -58,7 +58,7 @@ class Base:
         Arg:
             listOfObjs: A list of one or many class instance.
         """
-        with open("Rectangle.json", "w") as json_file:
+        with open(f"{cls.__name__}.json", "w") as json_file:
             if listOfObjs is None or len(listOfObjs) == 0:
                 pass
             else:
