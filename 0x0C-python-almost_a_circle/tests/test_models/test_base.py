@@ -14,7 +14,7 @@ class TestBaseMethods(unittest.TestCase):
     """
 
     def test_init_with_id(self):
-        obj = Base(id=5)
+        obj = Base(5)
         self.assertEqual(obj.id, 5)
 
     def test_init_without_id(self):
