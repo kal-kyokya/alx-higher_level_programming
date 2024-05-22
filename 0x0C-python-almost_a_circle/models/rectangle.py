@@ -127,32 +127,16 @@ class Rectangle(Base):
               ->  5th argument should be the y attribute
         """
 
-        if len(args) == 0 or args is None:
-            for attr, value in kwargs.items():
-                if attr == "id":
-                    super().__init__(value)
-                elif attr == "width":
-                    self.width = value
-                elif attr == "height":
-                    self.height = value
-                elif attr == "x":
-                    self.x = value
-                elif attr == "y":
-                    self.y = value
-        else:
+        if args is not None and len(args) != 0:
+            list_attr = ['id', 'width', 'height', 'x', 'y']
             if len(args) >= 1:
                 super().__init__(args[0])
-            if len(args) >= 2:
-                self.width = args[1]
-            if len(args) >= 3:
-                self.height = args[2]
-            if len(args) >= 4:
-                self.x = args[3]
-            if len(args) >= 5:
-                self.y = args[4]
-            if len(args) > 5:
-                raise ValueError("Clash in arguments detected.")
+            for i in range(1, len(args)):
+                self.list_attr[i] = args[i]
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
 
     def to_dictionary(self):
         """"returns the dictionary representation of a Rectangle."""
-        return self.__dict__
+        return (self.__dict__)
