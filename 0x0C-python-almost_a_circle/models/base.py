@@ -86,7 +86,10 @@ class Base:
         Arg:
             dictionary: Collection of attributes to be assigned.
         """
-        new_obj = cls(1, 1, 1, 0, 0)
+        if cls.__name__ == "Rectangle":
+            new_obj = cls(1, 1)
+        else:
+            new_obj = cls(1)
 
         new_obj.update(**dictionary)
         return (new_obj)
