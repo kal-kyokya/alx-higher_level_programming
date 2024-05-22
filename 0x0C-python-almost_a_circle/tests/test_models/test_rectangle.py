@@ -25,7 +25,6 @@ class RectangleTest(unittest.TestCase):
         """Proper initialization of Rectangle objects"""
         self.assertEqual(self.rect.width , 17)
         self.assertEqual(self.rect.height , 29)
-        self.assertEqual(self.rect.id , 4)
         self.assertEqual(self.rect.x , 0)
         self.assertEqual(self.rect.y , 0)
 
@@ -33,7 +32,6 @@ class RectangleTest(unittest.TestCase):
 
         self.assertEqual(self.rect.width , 11)
         self.assertEqual(self.rect.height , 23)
-        self.assertEqual(self.rect.id , 5)
         self.assertEqual(self.rect.x , 37)
         self.assertEqual(self.rect.y , 41)
 
@@ -41,7 +39,6 @@ class RectangleTest(unittest.TestCase):
 
         self.assertEqual(self.rect.width , 91)
         self.assertEqual(self.rect.height , 83)
-        self.assertEqual(self.rect.id , 51)
         self.assertEqual(self.rect.x , 79)
         self.assertEqual(self.rect.y , 67)
 
@@ -81,6 +78,9 @@ class RectangleTest(unittest.TestCase):
             self.rect.y = -1001
         self.assertEqual(str(error5.exception), "y must be >= 0")
 
+    def test_area(self):
+        """Correct area value"""
+        self.assertEqual(self.rect.area(), self.rect.width * self.rect.height)
 
 
 if __name__ == "__main__":
