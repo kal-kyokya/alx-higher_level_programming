@@ -65,4 +65,5 @@ class Base:
                 listOfDicts = []
                 for obj in listOfObjs:
                     listOfDicts.append(cls.to_dictionary(obj))
+                cls.to_json_string(listOfDicts)
                 json.dump(listOfDicts, json_file)
