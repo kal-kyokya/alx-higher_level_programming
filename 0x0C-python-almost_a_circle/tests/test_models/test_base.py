@@ -23,6 +23,10 @@ class BaseTest(unittest.TestCase):
         TestCase: Sub class of the built-in unittest module.
     """
 
+    def setUp(self):
+        """Initializes values to be create before each test."""
+        Base.nb_objects = 0
+
     def test_id_value(self):
         """Correct creation of Base instance"""
         obj1 = Base()

@@ -4,6 +4,7 @@
 """
 import unittest
 from models.rectangle import Rectangle
+from models.base import Base
 
 
 class RectangleTest(unittest.TestCase):
@@ -15,6 +16,7 @@ class RectangleTest(unittest.TestCase):
 
     def setUp(self):
         """Initializes values to be create before each test."""
+        Base._Base__nb_objects = 0
         self.rect = Rectangle(17, 29)
 
     def test_instanciation(self):
@@ -90,6 +92,44 @@ class RectangleTest(unittest.TestCase):
                 "[{}] ({}) {}/{} - {}/{}".format(self.rect.__class__.__name__,
                                                  self.rect.id, self.rect.x, self.rect.y,
                                                  self.rect.width, self.rect.height)))
+    def test_update(self):
+        """Proper updated values"""
+        self.rect = Rectangle(10, 10, 10, 10)
+
+        self.rect.update(89)
+        self.assertEqual(
+        str(self.rect), str(
+        "[{}] ({}) {}/{} - {}/{}".format(self.rect.__class__.__name__,
+                                                 self.rect.id, self.rect.x, self.rect.y,
+                                                 self.rect.width, self.rect.height)))
+
+        self.rect.update(89, 2)
+        self.assertEqual(
+        str(self.rect), str(
+        "[{}] ({}) {}/{} - {}/{}".format(self.rect.__class__.__name__,
+                                                 self.rect.id, self.rect.x, self.rect.y,
+                                                 self.rect.width, self.rect.height)))
+
+        self.rect.update(89, 2, 3)
+        self.assertEqual(
+        str(self.rect), str(
+        "[{}] ({}) {}/{} - {}/{}".format(self.rect.__class__.__name__,
+                                                 self.rect.id, self.rect.x, self.rect.y,
+                                                 self.rect.width, self.rect.height)))
+        self.rect.update(89, 2, 3, 4)
+        self.assertEqual(
+        str(self.rect), str(
+        "[{}] ({}) {}/{} - {}/{}".format(self.rect.__class__.__name__,
+                                                 self.rect.id, self.rect.x, self.rect.y,
+                                                 self.rect.width, self.rect.height)))
+
+        self.rect.update(89, 2, 3, 4, 5)
+        self.assertEqual(
+        str(self.rect), str(
+        "[{}] ({}) {}/{} - {}/{}".format(self.rect.__class__.__name__,
+                                                 self.rect.id, self.rect.x, self.rect.y,
+                                                 self.rect.width, self.rect.height)))
+
 
 
 if __name__ == "__main__":
