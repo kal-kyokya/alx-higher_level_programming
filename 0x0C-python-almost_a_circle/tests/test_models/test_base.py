@@ -75,6 +75,27 @@ class TestBaseMethods(unittest.TestCase):
         with open("Square.json", "r") as file:
             self.assertEqual(file.read(), "[]")
 
+    def test_write_file_basic(self):
+        """tests write to file basic capabilities, given 1 type of class
+        """
+        s = Square(3, 1, 1, 10)
+        s2 = Square(4, 2, 2, 20)
+        r1 = Rectangle(5, 6, 3, 3, 30)
+        r2 = Rectangle(7, 8, 4, 4, 40)
+        Square.save_to_file([s, s2])
+        with open('Square.json', 'r', encoding='utf-8') as myFile:
+            text = myFile.read()
+        list_of_dicts = eval(text)
+        self.assertEqual(list_of_dicts[0]['id'], 10)
+        self.assertEqual(list_of_dicts[1]['x'], 2)
+
+        Rectangle.save_to_file([r1, r2])
+        with open('Rectangle.json', 'r', encoding='utf-8') as myFile:
+            text = myFile.read()
+        list_of_dicts = eval(text)
+        self.assertEqual(list_of_dicts[0]['id'], 30)
+        self.assertEqual(list_of_dicts[1]['x'], 4)
+
 
 if __name__ == '__main__':
     unittest.main()
