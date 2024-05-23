@@ -96,6 +96,19 @@ class TestBaseMethods(unittest.TestCase):
         self.assertEqual(list_of_dicts[0]['id'], 30)
         self.assertEqual(list_of_dicts[1]['x'], 4)
 
+    def test_write_file_empty(self):
+        """tests empty list is written to correct default file
+        """
+        Rectangle.save_to_file([])
+        with open('Rectangle.json', 'r', encoding='utf-8') as myFile:
+            text = myFile.read()
+        self.assertEqual(text, "[]")
+
+        Square.save_to_file([])
+        with open('Square.json', 'r', encoding='utf-8') as myFile:
+            text = myFile.read()
+        self.assertEqual(text, "[]")
+
 
 if __name__ == '__main__':
     unittest.main()
