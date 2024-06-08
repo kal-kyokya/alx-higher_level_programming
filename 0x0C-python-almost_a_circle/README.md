@@ -25,7 +25,7 @@ GENERAL REQUIREMENTS:
 	     python3 -c 'print(__import__("my_module").MyClass.my_function.__doc__)'
 ->	A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 
-(2) PYTHON UNIT TESTs
+(2) PYTHON UNIT TESTS
 
 ->	Allowed editors:
 	    vi, vim, emacs
