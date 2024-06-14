@@ -22,7 +22,7 @@ GENERAL
 
 MORE INFO
 
-COMMENTS IN THE SQL FILE:
+COMMENTING THE SQL FILE:
 
 	$ cat my_script.sql
 	-- 3 first students in the Batch ID=3
