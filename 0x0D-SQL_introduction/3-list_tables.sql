@@ -1,4 +1,4 @@
 -- Script printing all tables found in a database
 
 -- Command taking care of the printing.
-SELECT TABLES;
+SHOW TABLES;
