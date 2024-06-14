@@ -22,7 +22,7 @@ GENERAL
 
 MORE INFO
 
-COMMENTS FOR YOUR SQL FILE:
+COMMENTS IN THE SQL FILE:
 
 	$ cat my_script.sql
 	-- 3 first students in the Batch ID=3
@@ -30,7 +30,7 @@ COMMENTS FOR YOUR SQL FILE:
 	SELECT id, name FROM students WHERE batch_id = 3 ORDER BY created_at DESC LIMIT 3;
 	$
 
-INSTALL MYSQL 8.0 ON UBUNTU 20.04 LTS
+INSTALLING MYSQL 8.0 ON UBUNTU 20.04 LTS
 
 	$ sudo apt update
 	$ sudo apt install mysql-server
@@ -39,7 +39,7 @@ INSTALL MYSQL 8.0 ON UBUNTU 20.04 LTS
 	mysql  Ver 8.0.25-0ubuntu0.20.04.1 for Linux on x86_64 ((Ubuntu))
 	$
 
-Connect to your MySQL server:
+Connecting to one's MySQL server:
 
 	$ sudo mysql
 	Welcome to the MySQL monitor.  Commands end with ; or \g.
