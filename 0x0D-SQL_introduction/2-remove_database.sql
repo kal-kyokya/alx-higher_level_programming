@@ -1,4 +1,4 @@
 -- Script deleting a database
 
 -- Command taking care of deletion.
-DROP DATABASE hbtn_0c_0;
+DROP DATABASE IF EXISTS hbtn_0c_0;
