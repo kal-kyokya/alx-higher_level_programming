@@ -1,7 +1,7 @@
 -- Script displaying all granted privileges to user John Doe.
 
 -- Command doing the display
-SHOW GRANT PRIVILEGES
+SELECT GRANT PRIVILEGES
 ON *.*
 TO 'user_0d_1'@'localhost'
 AND
