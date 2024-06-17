@@ -1,0 +1,5 @@
+-- Script creating a Database and its table
+
+-- Command creating the Database
+CREATE DATABASE
+IF NOT EXISTS `hbtn_0d_usa`;
