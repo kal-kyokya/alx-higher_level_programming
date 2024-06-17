@@ -1,7 +1,7 @@
 -- Script printing all rows of a defined field
 
 -- Command for printing
-SELECT * FROM `states`
+SELECT `id` FROM `states`
 UNION
-SELECT * FROM `cities`
+SELECT `id` FROM `cities`
 ORDER BY `cities`.`id`;
