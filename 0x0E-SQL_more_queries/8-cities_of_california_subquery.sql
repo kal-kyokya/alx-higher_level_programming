@@ -3,6 +3,7 @@
 -- Command for printing result
 SELECT *
 FROM `cities`
-WHERE `id` IN (
-      SELECT id FROM `states`;
-);
+WHERE `cities`.`id` IN (
+      SELECT `states`.`id` FROM `states`;
+)
+ORDER BY `cities`.`id`;
