@@ -1,7 +1,8 @@
--- Script printing all rows of a defined field
+-- Script subquerying two 2 tables
 
--- Command for printing
-SELECT `id` FROM `states`
-UNION
-SELECT `id` FROM `cities`
-ORDER BY `cities`.`id`;
+-- Command for printing result
+SELECT `name`
+FROM `cities`
+WHERE `id` IN (
+      SELECT id FROM `states`;
+);
