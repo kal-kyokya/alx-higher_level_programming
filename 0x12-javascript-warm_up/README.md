@@ -4,14 +4,14 @@ REQUIREMENTS
 
 GENERAL
 
--->	Allowed editors: vi, vim, emacs
--->	All files will be interpreted on Ubuntu 20.04 LTS using node (version 14.x)
--->	All files should end with a new line
--->	The first line of all files should be exactly #!/usr/bin/node
--->	A README.md file, at the root of the folder of the project, is mandatory
-code should be semistandard compliant (version 16.x.x). Rules of Standard + semicolons on top. Also as reference: AirBnB style
--->	All files must be executable
--->	The length of files will be tested using wc
+	-->	Allowed editors: vi, vim, emacs
+	-->	All files will be interpreted on Ubuntu 20.04 LTS using node (version 14.x)
+	-->	All files should end with a new line
+	-->	The first line of all files should be exactly #!/usr/bin/node
+	-->	A README.md file, at the root of the folder of the project, is mandatory
+	code should be semistandard compliant (version 16.x.x). Rules of Standard + semicolons on top. Also as reference: AirBnB style
+	-->	All files must be executable
+	-->	The length of files will be tested using wc
 
 MORE INFO
 
