@@ -2,6 +2,49 @@
 
 This directory is home to all files required for completion of the '0x0F-python-object_relational_mapping' project by ALX-Africa to its Software Engineering program.
 
+## Background Context
+
+In this project, we will link two amazing worlds: ```Databases and Python!```
+
+In the first part, we will use the module ```MySQLdb``` to connect to a MySQL database and execute wer SQL queries.
+
+In the second, we will use the module ```SQLAlchemy``` an Object-Relational Mapper (ORM).
+
+The biggest difference is: ```no more SQL queries!```
+Indeed, the purpose of an ORM is to abstract the storage to the usage.
+With an ORM, the biggest concern will be “What can one do with my objects” and not “How this object is stored? where? when?”.
+We won’t write any SQL queries only Python code.
+
+Last thing, code won’t be “storage type” dependent. We will be able to change storage easily without re-writing the entire project.
+
+```Without ORM:```
+
+	conn = MySQLdb.connect(host="localhost", port=3306, user="root", passwd="root", db="my_db", charset="utf8")
+	cur = conn.cursor()
+	cur.execute("SELECT * FROM states ORDER BY id ASC") # HERE I have to know SQL to grab all states in my database
+	query_rows = cur.fetchall()
+	for row in query_rows:
+	    print(row)
+	cur.close()
+	conn.close()
+
+```With an ORM:```
+
+	engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format("root", "root", "my_db"), pool_pre_ping=True)
+	Base.metadata.create_all(engine)
+
+	session = Session(engine)
+	for state in session.query(State).order_by(State.id).all(): # HERE: no SQL query, only objects!
+	    print("{}: {}".format(state.id, state.name))
+	session.close()
+
+Do we see the difference? Cool, right?
+
+The biggest difficulty with ORM is: ```The syntax!```
+
+Indeed, all of them have the same type of syntax, but not always.
+Please read/watch many tutorials and don’t try to read the entire related documentation before starting, just refer to them if you don’t get something.
+
 ## REQUIREMENTS
 
 ```GENERAL```
@@ -68,6 +111,6 @@ For installing MySQLdb, MySQL must have been installed:
 Also, for the warning message:
 
 	/usr/local/lib/python3.4/dist-packages/sqlalchemy/engine/default.py:552: Warning: (1681, "'@@SESSION.GTID_EXECUTED' is deprecated and will be removed in a future release.")
-	cursor.execute(statement, parameters)
+		cursor.execute(statement, parameters)
 
 One can ignore it.
