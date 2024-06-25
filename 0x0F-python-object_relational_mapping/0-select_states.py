@@ -16,3 +16,6 @@ if "__name__" == "__main__":
 
     query = "SELECT * FROM states"
     cursor.execute(query)
+
+    for obj in cursor.fetchall():
+        print(obj)
