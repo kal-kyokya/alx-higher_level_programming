@@ -16,7 +16,9 @@ if __name__ == "__main__":
 
     query = """SELECT *
                FROM cities
-               ORDER BY cities.id ASC"""
+               JOIN states
+               ON state_id = states.id
+               ORDER BY cities.id DESC"""
     cursor.execute(query)
 
     for obj in cursor.fetchall():
