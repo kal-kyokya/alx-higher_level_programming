@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 """
-'1-filter_states' uses the module MySQLdb to query all states of our Database starting with 'N' (Capital N).
+'1-filter_states' uses the module MySQLdb to:
+query all states of our Database starting with 'N' (Capital N).
 
 Usage:
 ./1-filter_states <mysql username> <mysql password> <database name>
@@ -14,7 +15,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    query = "SELECT * FROM states WHERE name LIKE 'N%'"
+    query = "SELECT * FROM states WHERE BINARY name LIKE 'N%'"
     cursor.execute(query)
 
     for obj in cursor.fetchall():
