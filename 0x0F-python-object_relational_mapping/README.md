@@ -2,7 +2,7 @@ This directory is home to all files required for completion of the '0x0F-python-
 
 ```REQUIREMENTS```
 
-#GENERAL
+#GENERAL#
 
 	->	Allowed editors:
 			vi, vim, emacs
