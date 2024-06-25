@@ -17,8 +17,8 @@ if __name__ == "__main__":
     query = """SELECT *
                FROM cities
                JOIN states
-               ON state_id = states.id
-               ORDER BY cities.id DESC"""
+               ON cities.state_id = states.id
+               ORDER BY cities.id ASC"""
     cursor.execute(query)
 
     for obj in cursor.fetchall():
