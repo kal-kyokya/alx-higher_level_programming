@@ -1,8 +1,10 @@
+# PYTHON - OBJECT-RELATIONAL MAPPING
+
 This directory is home to all files required for completion of the '0x0F-python-object_relational_mapping' project by ALX-Africa to its Software Engineering program.
 
-```REQUIREMENTS```
+## REQUIREMENTS
 
-#GENERAL#
+```GENERAL```
 
 	->	Allowed editors:
 			vi, vim, emacs
@@ -33,7 +35,7 @@ This directory is home to all files required for completion of the '0x0F-python-
 	->	It is not allowed to use:
 			execute with sqlalchemy
 
-```MORE INFO```
+## MORE INFO
 
 Install and activate venv
 To create a Python Virtual Environment, allowing you to install specific dependencies for this python project, we will install venv:
