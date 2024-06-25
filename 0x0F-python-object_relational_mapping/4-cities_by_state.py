@@ -14,7 +14,9 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    query = "SELECT * FROM cities"
+    query = """SELECT *
+               FROM cities
+               ORDER BY cities.id ASC"""
     cursor.execute(query)
 
     for obj in cursor.fetchall():
