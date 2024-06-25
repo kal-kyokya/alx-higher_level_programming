@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """
-'1-filter_states' uses the module MySQLdb to:
-query all states of our Database starting with 'N' (Capital N).
+'1-filter_states' uses the module MySQLdb to
+query the states table of our Database using 'BINARY'
+to enforce Case-sensitivity.
 
 Usage:
 ./1-filter_states <mysql username> <mysql password> <database name>
