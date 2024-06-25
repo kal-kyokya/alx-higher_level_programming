@@ -65,10 +65,9 @@ For installing MySQLdb, MySQL must have been installed:
 	>>> import sqlalchemy
 	>>> sqlalchemy.__version__ 
 	'1.4.22'
-Also, In case of the warning message:
+Also, for the warning message:
 
-	/usr/local/lib/python3.4/dist-packages/sqlalchemy/engine/default.py:552: Warning: (1681, "'@@SESSION.GTID_EXECUTED' is deprecated and will be re
-	moved in a future release.")                                                                                                                    
-	  cursor.execute(statement, parameters)  
+	/usr/local/lib/python3.4/dist-packages/sqlalchemy/engine/default.py:552: Warning: (1681, "'@@SESSION.GTID_EXECUTED' is deprecated and will be removed in a future release.")
+	cursor.execute(statement, parameters)
 
 One can ignore it.
