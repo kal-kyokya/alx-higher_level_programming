@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-'4-cities_by_states' uses the module MySQLdb to query all cities of our Database
+'4-cities_by_states' uses the module MySQLdb to query all cities of Database
 
 Usage:
 ./4-cities_by_states <mysql username> <mysql password> <database name>
