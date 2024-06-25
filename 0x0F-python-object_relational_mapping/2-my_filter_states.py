@@ -17,7 +17,7 @@ if __name__ == "__main__":
 
     cursor = db.cursor()
 
-    query = f"SELECT * FROM states WHERE name LIKE '{sys.argv[4]}'"
+    query = "SELECT * FROM states WHERE name LIKE '{}'".format(sys.argv[4])
     cursor.execute(query)
 
     for obj in cursor.fetchall():
