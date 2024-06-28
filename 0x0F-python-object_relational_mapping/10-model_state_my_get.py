@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-'9-model_state_filter_a' filters a set of retrieved table's rows
+'10-model_state_my_get' match an input name with table rows.
 """
 import sys
 from sqlalchemy import create_engine
@@ -18,6 +18,9 @@ if __name__ == "__main__":
     session_maker = sessionmaker(bind=engine)
     session = session_maker()
 
-    for state in session.query(State).order_by(State.id):
-        if "a" in state.name:
-            print("{}: {}".format(state.id, state.name))
+    states = session.query(State).filter(State.name == sys.argv[4]).all()
+    if states is []:
+        print("Not found")
+    else:
+        for state in states:
+            print(f"{state.id}")
