@@ -38,3 +38,7 @@ VALUES (1, "Kinshasa"), (2, "Nairobi"), (3, "Kigali"),
        (4, "Bujumbura"), (5, "Kampala"), (6, "Dodoma"),
        (7, "Lagos"), (8, "Lusaka"), (9, "Harare"),
        (10, "N`Djamena"), (11, "Hargeysa"), (12, "Addis-Ababa");
+
+-- Show structure of Database's tables
+SHOW CREATE TABLE states;
+SHOW CREATE TABLE cities;

@@ -21,3 +21,6 @@ VALUES ("Congo"), ("Kenya"), ("Rwanda"),
        ("Burundi"), ("Uganda"), ("Tanzania"),
        ("Nigeria"), ("Zambia"), ("Zimbabwe"),
        ("Tchad"), ("Somaliland"), ("Ethiopia");
+
+-- Show structure of database's tables
+SHOW CREATE TABLE states;
