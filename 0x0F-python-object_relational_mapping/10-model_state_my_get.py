@@ -19,8 +19,8 @@ if __name__ == "__main__":
     session = session_maker()
 
     states = session.query(State).filter(State.name == sys.argv[4]).all()
-    if states is []:
-        print("Not found")
-    else:
+    if len(states) > 0:
         for state in states:
             print(f"{state.id}")
+    else:
+        print("Not found")
