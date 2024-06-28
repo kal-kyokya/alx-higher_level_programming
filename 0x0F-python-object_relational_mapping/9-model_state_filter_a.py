@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """
-'8-model_state_fetch_first' Retrieves a table element
+'9-model_state_filter_a' filters a set of retrieved table's rows
 """
 import sys
-from model_state import State
 from sqlalchemy import create_engine
 from sqlalchemy.orm import sessionmaker
+from model_state import State
 
 
 if __name__ == "__main__":
@@ -18,8 +18,6 @@ if __name__ == "__main__":
     session_maker = sessionmaker(bind=engine)
     session = session_maker()
 
-    state = session.query(State).first()
-    if state is None:
-        print("Empty table")
-    else:
+    states = session.query(State).filter(State.name.like("%a%")).all()
+    for state in states:
         print(f"{state.id}: {state.name}")
