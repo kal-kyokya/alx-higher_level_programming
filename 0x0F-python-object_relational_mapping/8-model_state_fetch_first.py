@@ -20,6 +20,6 @@ if __name__ == "__main__":
 
     state = session.query(State).first()
     if state is None:
-        print("Empty table")
+        print("Nothing")
     else:
         print(f"{state.id}: {state.name}")
