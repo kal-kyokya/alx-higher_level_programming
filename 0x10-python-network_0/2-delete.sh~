@@ -1,0 +1,3 @@
+#!/bin/bash
+# Sends 'Delete' Request to a web server
+curl -X DELETE $1
