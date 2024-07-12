@@ -1,0 +1,3 @@
+#!/bin/bash
+# Display all HTTP method accepted by the server
+curl -Xs OPTIONS '$1'
