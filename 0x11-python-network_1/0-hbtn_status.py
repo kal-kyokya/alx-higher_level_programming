@@ -1,5 +1,7 @@
 #!/usr/bin//python3
-# Fetch a url using the 'urllib' package
+"""
+'0-hbtn_status_py' fetches a url using the 'urllib' package
+"""
 import urllib.request as req
 
 
