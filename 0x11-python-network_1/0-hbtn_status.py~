@@ -1,0 +1,10 @@
+#!/usr/bin//python3
+# Fetch a url using the 'urllib' package
+import urllib.request as req
+
+
+if __name__ == "__main__":
+    url = "http://kalkyokya.tech/"
+    response = req.urlopen(url)
+    html = response.getheaders()
+    print(html)
