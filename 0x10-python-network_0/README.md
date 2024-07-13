@@ -1,6 +1,10 @@
-# REQUIREMENTS
+# 0x10. PYTHON - NETWORK 0
 
-## GENERAL
+This repository hosts all the files needed in order to satisfy the 'Python - Network' project given by ALX-Africa to its Software Enginnering registered student.
+
+## REQUIREMENTS
+
+### GENERAL
 
 	->	Allowed editors:
 			vi, vim, emacs
