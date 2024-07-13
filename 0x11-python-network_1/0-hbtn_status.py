@@ -2,12 +2,12 @@
 """
 '0-hbtn_status_py' fetches a url using the 'urllib' package
 """
-import urllib.request as req
+from urllib import request
 
 
 if __name__ == "__main__":
     url = "http://kalkyokya.tech/"
-    with req.urlopen(url) as response:
+    with request.urlopen(url) as response:
         content = response.read()
         print("Body response:")
         print("\t- type: {}".format(type(content)))
