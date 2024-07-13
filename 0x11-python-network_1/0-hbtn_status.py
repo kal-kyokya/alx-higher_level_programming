@@ -1,11 +1,13 @@
 #!/usr/bin/python3
-"""fetches https://intranet.hbtn.io/status"""
-from urllib import request
+# Fetch a url using the 'urllib' package
+import urllib.request as req
+
 
 if __name__ == "__main__":
-    with request.urlopen("https://intranet.hbtn.io/status") as response:
-        response = response.read()
+    url = "http://kalkyokya.tech/"
+    with req.urlopen(url) as response:
+        content = response.read()
         print("Body response:")
-        print("\t- type: {}".format(type(response)))
+        print("\t- type: {}".format(type(content)))
         print("\t- content: {}".format(response))
-        print("\t- utf8 content: {}".format(response.decode(encoding='utf-8')))
+        print("\t- utf8 content: {}".format(content.decode(encoding="utf-8")))
