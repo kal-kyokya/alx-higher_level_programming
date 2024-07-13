@@ -6,7 +6,7 @@ import requests
 
 
 if __name__ == "__main__":
-    response = requests.get('http://alx-intranet.hbtn.io/status')
+    response = requests.get('http://kalkyokya.tech')
     content = response.text
     print("Body response:")
     print("\t- type:", type(content))
