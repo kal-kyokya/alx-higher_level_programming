@@ -21,7 +21,7 @@ if __name__ == "__main__":
         json_r = r.json()
         if json_r:
 
-            print("{} {}".format(json_r.get('id'), json_r.get('name')))
+            print("[{}] {}".format(json_r.get('id'), json_r.get('name')))
         else:
             print("No result")
     except ValueError:
