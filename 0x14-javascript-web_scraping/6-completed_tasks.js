@@ -29,4 +29,5 @@ request(url, (error, response, body) => {
       obj[userId]++;
     }
   });
+  console.log(obj);
 });
