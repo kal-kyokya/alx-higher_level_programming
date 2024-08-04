@@ -1,0 +1,2 @@
+#!/usr/bin/node
+// Reads the content of a file and send it to standard output
