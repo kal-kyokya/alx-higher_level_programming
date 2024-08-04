@@ -1,30 +1,43 @@
 #!/usr/bin/node
+const process = require('process');
 const request = require('request');
-const url = 'http://swapi.co/api/films/';
-let id = parseInt(process.argv[2], 10);
-let characters = [];
+let order = [];
+let responses = {};
 
-request(url, function (err, response, body) {
-  if (err == null) {
-    const resp = JSON.parse(body);
-    const results = resp.results;
-    if (id < 4) {
-      id += 3;
+function getCharName (charUrl) {
+  let val;
+  val = request(charUrl, function (error, response, body) {
+    if (error != null) {
+      console.log(error);
     } else {
-      id -= 3;
+      let data = JSON.parse(body);
+      val = data['name'];
+      responses[charUrl] = val;
     }
-    for (let i = 0; i < results.length; i++) {
-      if (results[i].episode_id === id) {
-        characters = results[i].characters;
-        break;
-      }
-    }
-    for (let j = 0; j < characters.length; j++) {
-      request(characters[j], function (err, response, body) {
-        if (err == null) {
-          console.log(JSON.parse(body).name);
-        }
+  });
+}
+
+function doParse () {
+  let movie = process.argv[2];
+  let url = 'https://swapi.co/api/films/' + movie;
+
+  request(url, function (error, response, body) {
+    if (error != null) {
+      console.log(error);
+    } else {
+      let data = JSON.parse(body);
+      data['characters'].forEach(function (charUrl) {
+        order.push(charUrl);
+        getCharName(charUrl);
       });
     }
-  }
-});
+  });
+}
+
+doParse();
+setTimeout(function () {
+  // some stuff
+  order.forEach(function (url) {
+    console.log(responses[url]);
+  });
+}, 5000);
