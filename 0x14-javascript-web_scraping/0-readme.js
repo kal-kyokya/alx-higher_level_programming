@@ -4,7 +4,7 @@ const fileSystem = require('fs');
 
 fileSystem.readFile(process.argv[2], 'UTF-8', (err, fileContent) => {
   if (err) {
-    console.log('Error occured during reading of file');
+    console.log(err);
     process.exit(1);
   }
   console.log(fileContent);
