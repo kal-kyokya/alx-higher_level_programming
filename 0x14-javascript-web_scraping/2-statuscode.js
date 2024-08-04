@@ -8,10 +8,10 @@ const request = require('request');
 
 const url = process.argv[2];
 
-request(url, (err, response, body) => {
-  if (err) {
-    console.log(err);
+request(url, (error, response, body) => {
+  if (error) {
+      console.error('code:', error);
     process.exit(1);
   }
-  console.log('code: ', response && response.statusCode);
+  console.log('code:', response && response.statusCode);
 });
