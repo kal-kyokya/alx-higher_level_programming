@@ -8,19 +8,19 @@ request(url, (error, response, body) => {
     console.error('Error: ', error);
     process.exit(1);
   }
-    const parsedBody = JSON.parse(body);
-    const results = parsedBody.results;
+  const parsedBody = JSON.parse(body);
+  const results = parsedBody.results;
 
-    let count = 0;
-    results.forEach((movie) => {
-	const regex = /^(?:(?!18).)*$/;
-	let characters = movie.characters;
+  let count = 0;
+  results.forEach((movie) => {
+    const regex = /^(?:(?!18).)*$/;
+    const characters = movie.characters;
 
-	characters.forEach((actor) => {
-	    if (!regex.test(actor)) {
-		count++;
-	    }
-	});
+    characters.forEach((actor) => {
+      if (!regex.test(actor)) {
+        count++;
+      }
     });
-    console.log(count);
+  });
+  console.log(count);
 });
