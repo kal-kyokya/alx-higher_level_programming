@@ -10,6 +10,6 @@ request(resource, (error, response, body) => {
     console.error('Error:', error);
     process.exit(1);
   }
-    parsedObj = JSON.parse(body);
-    console.log(parsedObj.title);
+  parsedObj = JSON.parse(body);
+  console.log(parsedObj.title);
 });
