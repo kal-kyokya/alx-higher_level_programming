@@ -1,26 +1,16 @@
 #!/usr/bin/node
-// Computes number of movies containing a pattern
+
 const request = require('request');
 
-const url = 'https://swapi-api.alx-tools.com/api/films/';
-request(url, (error, response, body) => {
-  if (error) {
-    console.error('Error: ', error);
-    process.exit(1);
+const apiURL = process.argv[2];
+
+request.get(apiURL, (err, res, body) => {
+  if (err) {
+    console.error('Error:', err);
+    return;
   }
-  const parsedBody = JSON.parse(body);
-  const results = parsedBody.results;
+  const data = JSON.parse(body);
+  const moviesWithWedgeAntilles = data.results.filter(movie => movie.characters.find(character => character.match(/\/people\/18\/?$/)));
 
-  let count = 0;
-  results.forEach((movie) => {
-    const regex = /^(?:(?!18).)*$/;
-    const characters = movie.characters;
-
-    characters.forEach((actor) => {
-      if (!regex.test(actor)) {
-        count++;
-      }
-    });
-  });
-  console.log(count);
+  console.log(moviesWithWedgeAntilles.length);
 });
