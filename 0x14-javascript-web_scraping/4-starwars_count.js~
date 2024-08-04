@@ -1,0 +1,19 @@
+#!/usr/bin/node
+// Computes number of movies containinga pattern
+const request = require('request');
+
+const url = 'https://swapi-api.alx-tools.com/api/films/';
+request(url, (error, response, body) => {
+  if (error) {
+    console.error('Error: ', error);
+    process.exit(1);
+  }
+    const parsedBody = JSON.parse(body);
+    const results = parsedBody.results;
+
+    let count = 0;
+    results.forEach((movie) => {
+	const regex = /*18/;
+	let characters = movie.characters;
+    });
+});
