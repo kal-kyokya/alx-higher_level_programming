@@ -10,7 +10,7 @@ const url = process.argv[2];
 
 request(url, (error, response, body) => {
   if (error) {
-      console.error('code:', error);
+    console.error('code:', error);
     process.exit(1);
   }
   console.log('code:', response && response.statusCode);
