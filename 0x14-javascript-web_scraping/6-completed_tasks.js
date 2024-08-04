@@ -1,27 +1,32 @@
 #!/usr/bin/node
-
+// Computes the number of task completed by user id
 const request = require('request');
 
-const apiURL = process.argv[2];
-
-request.get(apiURL, (err, res, body) => {
-  if (err) {
-    console.error('Error:', err);
-    return;
+const url = process.argv[2];
+request(url, (error, response, body) => {
+  if (error) {
+    console.log(error);
   }
+  const tasks = JSON.parse(body);
+  const set = new Set();
 
-  const todos = JSON.parse(body);
-
-  const tasksCompletedByUser = {};
-
-  todos.forEach(todo => {
-    if (todo.completed) {
-      if (tasksCompletedByUser[todo.userId]) {
-        tasksCompletedByUser[todo.userId]++;
-      } else {
-        tasksCompletedByUser[todo.userId] = 0;
-      }
+  tasks.forEach(task => {
+    if (!set.has(task.userId)) {
+      set.add(task.userId);
     }
   });
-  console.log(tasksCompletedByUser);
+
+  const users = [...set];
+
+  const obj = {};
+  users.forEach(id => {
+    obj[id] = 0;
+  });
+
+  tasks.forEach(task => {
+    if (task.completed) {
+      const userId = task.userId;
+      obj[userId]++;
+    }
+  });
 });
