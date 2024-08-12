@@ -30,12 +30,14 @@ This repository is home to all files required for completion of the '0x15' Proje
 	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	</head>
 
-###PS###: As of Monday, 12th August 2024, searching for "the latest jQuery version yields:
+###NOTE
+
+As of Monday, 12th August 2024, searching for "the latest jQuery version yields:
 
 	{
-		Original author(s)	John Resig
-		Stable release	3.7.1 / (August 28, 2023)
-		Preview release	4.0.0-beta / February 6, 2024
-		Repository	github.com/jquery/jquery
-		Written in	JavaScript
+		Original author(s):	John Resig
+		Stable release:	3.7.1 / (August 28, 2023)
+		Preview release:	4.0.0-beta / February 6, 2024
+		Repository:	github.com/jquery/jquery
+		Written in:	JavaScript
 	}
