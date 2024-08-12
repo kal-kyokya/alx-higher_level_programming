@@ -36,8 +36,8 @@ As of Monday, 12th August 2024, searching for "the latest jQuery version yields:
 
 	{
 		Original author(s):	John Resig
-		Stable release:	3.7.1 / (August 28, 2023)
+		Stable release:		3.7.1 / (August 28, 2023)
 		Preview release:	4.0.0-beta / February 6, 2024
-		Repository:	github.com/jquery/jquery
-		Written in:	JavaScript
+		Repository:		github.com/jquery/jquery
+		Written in:		JavaScript
 	}
