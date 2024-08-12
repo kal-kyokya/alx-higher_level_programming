@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>School of Dem</title>
+  </head>
+  <body>
+    <header> 
+      First HTML page
+    </header>
+    <footer>
+      Dj Dem since 1999
+    </footer>
+    <script type="text/javascript" src="0-script.js"></script>
+  </body>
+</html>
