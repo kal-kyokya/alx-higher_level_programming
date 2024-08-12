@@ -3,7 +3,7 @@
 
 try {
   $(function () {
-    $('#add_item').click(function () {
+    $('#add_item').click( function () {
       $('.my_list').append('<li>Extra item</li>');
     });
   });
