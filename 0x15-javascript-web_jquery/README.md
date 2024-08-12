@@ -27,7 +27,7 @@ This repository is home to all files required for completion of the '0x15' Proje
 ### IMPORT JQUERY
 
 	<head>
-	    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
 	</head>
 
 ###NOTE
